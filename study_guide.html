@@ -1,131 +1,151 @@
-<p>
+<h1>
 Level 0 Study Guide
+</h1>
 
+<h4>
 Variables
-
+</h4>
 ‘Declare and initialize a variable’ means make a variable and give it a value.
-
-int age = 12;
+<p>
+<code>
+int age = 12; <br>
 String name = “Sarah”;
+</code>
+</p>
+Remember, String is capitalized and the value always has quotes around it.<br>
 
-Remember, String is capitalized and the value always has quotes around it.
-
-Every time you want to hold a new piece of information you need to declare the variable and initialize it, by setting it equal to something.
+Every time you want to hold a new piece of information you need to declare the variable and initialize it, by setting it equal to something.<br>
 
 If you want to generate a random number you do it like this.
-
+<p><code>
 int x = new Random().nextInt(10);
+  </code></p>
+The number in parenthesis limits the value of the random number you will get. In this case, x will be a number between 0 and 9.<br>
 
-The number in parenthesis limits the value of the random number you will get. In this case, x will be a number between 0 and 9.
-
+<h4>
 if Statements
-
-if (question){
-
-}
-else if (next question){
-
-}
-else{
-  
-}
-
+</h4>
+<p><code>
+if (condition){<br>
+<br>
+}<br>
+else if (next condition){<br>
+<br>
+}<br>
+else{<br>
+  <br>
+}<br>
+</p></code>
 The question looks like this for a String
-(name .equals (“Sarah”))
+<p><code>(name .equals (“Sarah”))</p></code>
 You use .equals to compare a String. The String value is in parenthesis and in quotes.
-
+<br>
 The question looks like this for an int
-(age == 12)
-Remember you use == for a comparison.
+<p><code>(age == 12)</p></code>
+Remember you use == for a comparison.<br>
 
-It is a good idea to use an else with an if statement to catch any options you didn’t think of.
+It is a good idea to use an else with an if statement to catch any options you didn’t think of.<br>
 
-
+<h4>
 for loop
-
+</h4>
+<p><code>
 for ( int i = 0; i<10; i++){
 
 }
-
- int i = 0;   This is the starting point of the loop. You must declare the int.
- i<10; This is the finishing point for the loop. The loop will continue as long as i is less than 10.
+</p></code>
+  <code>
+ int i = 0; </code>  This is the starting point of the loop. You must declare the int.
+<code> i<10; </code>This is the finishing point for the loop. The loop will continue as long as i is less than 10.
  i++ This is how much the loop counter changes by each time. In this case it increments (goes up) by 1.
-
-for ( int i = 10; i>0; i-=2){
-
-}
-
+<p><code>
+for ( int i = 10; i>0; i-=2){<br>
+<br>
+}<br>
+</p></code>
 This loop counts down in 2s starting at 10.
 10, 8 , 6, 4, 2.  It doesn’t go to 0 because it must be greater than 0.
-Notice that you have to change from less than (<) to greater than (>) when you count down.
-
+Notice that you have to change from less than (<) to greater than (>) when you count down.<br>
+<h4>
 JOptionPane
-
+  </h4>
 If you want a pop up to give the user a message use
+  <p><code>
 JOptionPane.showMessageDialog(null, “Hello ”+ name);
-Don’t forget the null, or that any text needs to be in quotes.
+</p></code>
+Don’t forget the null, or that any text needs to be in quotes.<br>
 
 If you want to get an answer from the user, use
+    <p><code>
 	String ageString = JOptionPane.showInputDialog(“How old are you?”);
-Remember you must catch the user’s answer in a String, otherwise you can’t use it.
+        </p></code>
+Remember you must catch the user’s answer in a String, otherwise you can’t use it.<br><br>
 
 Because the answer is always a String, you sometimes want to convert it to a number so you can do a calculation. This is how you do it.
+    <p><code>
 	int age = Integer.parseInt(ageString);
-
+    </p></code>
 If you want to write something to the console, instead of using a pop-up
+<p><code>
 	System.out.println(age);
-
+</p></code>
 
 Methods
 You must have a main method in order to start your class running.
-
-public static void main(String[] args){
-
-}
-
+<p><code>
+public static void main(String[] args){<br>
+<br>
+}<br>
+</p></code>
 
 Other methods looks like this
-	void drawSquare(){
-for (int i= 0; i<4; i++){
-Tortoise.move(100);
-Tortoise.turn(90);
-}
-}
-void This tells you what the method will return - in this case nothing.
-drawSquare  This is the name of the method, that you use to call it.
-() This tells you what parameters the method needs. In this case it doesn’t need any.
+<p><code>
+	void drawSquare(){<br>
+&nbspfor (int i= 0; i<4; i++){<br>
+&nbsp&nbspTortoise.move(100);<br>
+&nbsp&nbspTortoise.turn(90);<br>
+&nbsp}<br>
+}<br>
+                    </p></code>
+void This tells you what the method will return - in this case nothing.<br>
+drawSquare  This is the name of the method, that you use to call it.<br>
+() This tells you what parameters the method needs. In this case it doesn’t<br> need any.<br>
 You call the method like this
+ <p><code>
 	drawSquare();
-
+ </p></code>
 Look at this method
-int sevenTimes(int number){
-	return number * 7;
-}
-In this case it is expecting an int, so you need you provide an int when you call the method and it is going to a return an int so you need to create an int to put it in, like this
+ <p><code>
+int sevenTimes(int number){<br>
+	&nbspreturn number * 7;<br>
+}<br>
+ </p></code>
+In this case it is expecting an int, so you need you provide an int when you call the method. And it is going to a return an int so you need to create an int to put it in, like this<br>
+<p><code>
 	int answer = sevenTimes(2);
-
+  </p></code>
 The value of answer will be 14.
-
+<h4>
 Modulo
-
-Modulo means remainder.
+</h4>
+Modulo means remainder.<br>
 The value of 11%5 is 1, because 5 goes into 11, 2 times (=10) with a remainder of 1.
-
+<br><br>
 It is useful to use modulo to alternate between options. e.g.
+<p><code>
+for (int i = 0; i<1000;i+=10){<br>
+&nbsp	if (i%3==0){<br>
+&nbsp&nbsp		fill(255,0,0);<br>
+&nbsp	}<br>
+&nbsp	else if (i%3==1){<br>
+&nbsp&nbsp		fill(0,255,0);<br>
+&nbsp	}<br>
+&nbspelse if (i%3==2){<br>
+	&nbsp&nbsp	fill(0,0,255);<br>
+	&nbsp}<br>
+	&nbspellipse(i,i,10,10);<br>
+}<br>
 
-for (int i = 0; i<1000;i+=10){
-	if (i%3==0){
-		fill(255,0,0);
-	}
-	else if (i%3==1){
-		fill(0,255,0);
-	}
-else if (i%3==2){
-		fill(0,0,255);
-	}
-	ellipse(i,i,10,10);
-}
-
+                          </p></code>
 This code will draw a line of circles alternating in red, green and blue.
 
-	</p>
