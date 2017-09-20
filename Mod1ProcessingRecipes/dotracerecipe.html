@@ -1,0 +1,40 @@
+<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:left;height:11pt}.c3{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:left}.c2{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c4{text-indent:36pt}.title{padding-top:0pt;color:#000000;font-size:21pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.15;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:13pt;padding-bottom:10pt;font-family:"Trebuchet MS";line-height:1.15;font-style:italic;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:10pt;color:#000000;font-size:16pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.15;text-align:left}h2{padding-top:10pt;color:#000000;font-weight:700;font-size:13pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.15;text-align:left}h3{padding-top:8pt;color:#666666;font-weight:700;font-size:12pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.15;text-align:left}h4{padding-top:8pt;color:#666666;text-decoration:underline;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.15;text-align:left}h5{padding-top:8pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.15;text-align:left}h6{padding-top:8pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.15;font-style:italic;text-align:left}</style></head><body class="c2">
+<p class="c1"><span class="c0"></span></p>
+<p class="c3"><span class="c0">//1. Make a variable to hold the X co-ordinate of the dot, and set it to something.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c3"><span class="c0">void setup() {</span></p>
+<p class="c3"><span class="c0">&nbsp; size(800, 200);</span></p>
+<p class="c3"><span class="c0">}</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c3"><span class="c0">void draw() {</span></p>
+<p class="c3"><span class="c0">&nbsp; //3. make it a nice color</span></p>
+<p class="c3"><span class="c0">&nbsp;</span></p>
+<p class="c3"><span class="c0">&nbsp; //4. if the mouse is pressed...</span></p>
+<p class="c3"><span class="c0">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="c3 c4"><span class="c0">//5. ... change the X co-ordinate so that the dot moves to the right</span></p>
+<p class="c3"><span class="c0">&nbsp; &nbsp; &nbsp; </span></p>
+<p class="c3"><span class="c0">&nbsp; //2. Draw an ellipse of height and width 100. Make sure to use your variable for the X position.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c3"><span class="c0">//6. Make your dot move really fast so that it can win the race (you have to figure out what part of your code to change)</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c3"><span class="c0">//7. Use this method to play a ding when your dot crosses the finish line. </span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c3"><span class="c0">}</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c3"><span class="c0">import ddf.minim.*;</span></p>
+<p class="c3"><span class="c0">boolean soundPlayed = false;</span></p>
+<p class="c3"><span class="c0">void playSound() {</span></p>
+<p class="c3"><span class="c0">&nbsp; if (!soundPlayed) {</span></p>
+<p class="c3"><span class="c0">&nbsp; &nbsp; Minim minim = new Minim(this);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="c3"><span class="c0">&nbsp; &nbsp; AudioSample sound = minim.loadSample(&quot;ding2.wav&quot;);</span></p>
+<p class="c3"><span class="c0">&nbsp; &nbsp; sound.trigger();</span></p>
+<p class="c3"><span class="c0">&nbsp; &nbsp; soundPlayed = true;</span></p>
+<p class="c3"><span class="c0">&nbsp; }</span></p>
+<p class="c3"><span class="c0">}</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c1"><span class="c0"></span></p>
+
+<div><p class="c20"><span class="c3">//Copyright League of Amazing Programmers 2013-2017</span></p></div></body></html>
