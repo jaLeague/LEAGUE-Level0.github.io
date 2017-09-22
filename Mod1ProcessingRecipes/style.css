@@ -20,12 +20,19 @@ p {
     font-family: verdana;
     font-size: 20px;
 }
+
+p.code {
+    font-family: Lucida Console;
+    font-size: 16px;
+}
+
 img {
     display: block;
     margin: right;
     width: 20%;
     height: 20%;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
