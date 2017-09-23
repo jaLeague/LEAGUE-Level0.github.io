@@ -7,7 +7,7 @@ h1 {
 
     text-align: center;
     font-family: verdana;
-    font-size: 64px;
+    font-size: 48px;
 }
 h2 {
 
@@ -20,12 +20,35 @@ p {
     font-family: verdana;
     font-size: 20px;
 }
+
+p.normal {
+    font-family: verdana;
+    font-size: 16px;
+}
+
+p.code {
+    color: #6E9806;
+    font-family: Courier;
+    font-size: 16px;
+    padding-left: 50px;
+
+}
+
+p.copyright {
+    font-famil: Arial;
+    font-size: 12px;
+}
+
 img {
     display: block;
     margin: right;
     width: 20%;
     height: 20%;
 }
+
+img.middle {
+    vertical-align:
+
 ul {
     list-style-type: none;
     margin: 0;
