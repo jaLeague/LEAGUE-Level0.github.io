@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<title>Level 0 - Waldo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://league-level0.github.io/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+<body>
+
+<h1>Where's Waldo?</h1>
+
+
+
+
+<p class="normal">
+1. Create a new <b>Processing</b> sketch.<br>
+<br>
+2. Copy the following code into the sketch:</p>
+
+<p class="code">
+
+void setup() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	PImage waldo = loadImage("waldo.jpg"); // 5. Change this to match your file name.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	size(waldo.width, waldo.height);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	image(waldo, 0, 0);<br>
+}<br>
+<br>
+void draw() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	// 6. Use this print statement to find out the coordinates of Waldo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	// println("X: " + mouseX + " Y: " + mouseY); <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	// 7. If the mouse is on Waldo, print “Waldo found!”<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	// 8. If Waldo is found, also use the method below to play “Woohoo”<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	// Change the name of the sound file if you need to
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	// 9. If the mouse is pressed and they’re not on Waldo, play “Doh”<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	// Change the name of the sound file if you need to
+<br>
+}<br>
+<br>
+void playWoohoo() {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; woohoo.stop();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;  woohoo.trigger();<br>
+}<br>
+<br>
+void playDoh() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;  doh.stop();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;  doh.trigger();<br>
+}<br>
+<br>
+import ddf.minim.*;<br>
+Minim minim = new Minim(this);   <br>
+AudioSample doh = minim.loadSample("/Users/League/Google Drive/league-sounds/homer-doh.wav");<br>
+AudioSample woohoo = minim.loadSample("/Users/League/Google Drive/league-sounds/homer-woohoo.wav");<br>
+</p>
+<p class="normal">
+3. Find a really hard Where's Waldo picture like this one: <br>
+<br>
+<img alt="waldo.png" src="images/waldo.jpg" style="width: 500.00px; height: 308.00px; margin-left: 100px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""><br>
+<br>
+Drop the image onto your sketch.<br>
+<br>
+4. Follow the remaining recipe instructions in the <b>setup</b> and <b>draw</b> methods.<br>
+</p>
+
+
+<script src="https://league-level0.github.io/copyright.js"></script>
+
+</body></html>
