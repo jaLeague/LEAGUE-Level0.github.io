@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<title>Level 0 - Zombie Eyes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://league-level0.github.io/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+<body>
+
+<h1>Zombie Eyes</h1>
+<p class="normal"> 
+We are going to make a face with animated eyes.
+You could use your own face (take a picture with photobooth) or a zombie, a cat, or whatever you like. 
+Whichever you choose, the eyes should be prominent.</p>
+
+
+<p class="normal"> 
+1. Start a new sketch with setup() and draw() methods.<br>
+<br>
+2. Drop the image of the face onto your sketch. Load it like this in the <b>setup</b> method:</p>
+    <p class="code">
+    PImage face = loadImage(&quot;face.jpeg&quot;);<br>
+    image(face, 0, 0);
+    </p>
+
+
+<p class="normal"> 
+3. Adjust the size of your sketch if necessary.</p>
+    <p class="code">
+    size(width, height);
+    </p>
+
+<p class="normal">     
+Or adjust the size of your image like this:</p>
+    <p class="code">
+   face.resize(width, height);
+    </p>
+
+<p class="normal"> IMPORTANT: Make sure you use the size or resize command before the image command.<br>
+<br>
+4. Place 2 ellipses over the irises of the eyes in the <b>draw</b> method.</p>
+    <p class="code">
+   ellipse(x, y, width, height);
+    </p>
+
+<p class="normal">  
+5. Give the irises a color with the fill command (use numbers in place of red, green, blue).</p>
+    <p class="code">
+   fill(red, green, blue);
+    </p>
+
+<p class="normal">  
+6. Change the color of the irises when the mouse moves.</p>
+    <p class="code">
+   mouseX<br>
+   mouseY   
+   </p>
+
+<p class="normal">  
+7. Draw black pupils on top of the irises.<br>
+<br>
+8. OPTIONAL: Have the pupils follow the mouse. 
+</p>
+<br>
+<script src="https://league-level0.github.io/copyright.js"></script>
+
+</body></html>

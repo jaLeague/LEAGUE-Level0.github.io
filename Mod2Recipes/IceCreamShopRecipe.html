@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<title>Level 0 - Ice Cream Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://league-level0.github.io/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+<body>
+
+<h1>Ice Cream Shop</h1>
+
+<p class="normal">
+1. Start a new Processing sketch.<br>
+2. Copy the code below into the sketch.<br>
+3. Write code in the draw method, to make your ice cream cone. </p>
+
+<p class="code">
+void setup(){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; size(500,500);<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; //1. call the makeIceCreamCone() below to make an ice cream cone<br>
+  <br>
+ &nbsp;&nbsp;&nbsp;&nbsp; //2. use the addScoop method below to add as many scoops of ice cream as you want<br>
+ <br>
+ &nbsp;&nbsp;&nbsp;&nbsp; //3. Use the method to add sprinkles to your ice cream<br>
+  <br>
+ &nbsp;&nbsp;&nbsp;&nbsp; //4. Write code to add a cherry to the top of your ice cream. hint: ellipse<br>
+<br>
+}<br>
+<br>
+/******************************************************************/<br>
+<br>
+//Icecream recipe<br>
+int SCOOPSIZE = 150;<br>
+int scoops = 0;<br>
+int coneY = 320;<br>
+<br>
+//Don't Touch this method; Call it!!<br>
+void makeIceCreamCone(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    //noStroke();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    fill(188,126,49);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    triangle(190,320,310,300,255,500);<br>
+}<br>
+<br>
+//Don't touch this method; call it!!!<br>
+void addScoop(String flavor){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; noStroke();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;  if(flavor.equalsIgnoreCase("chocolate")){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     fill(116,71,16);<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;   }<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;   else if(flavor.equalsIgnoreCase("Strawberry")){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    fill( 232 ,144,129);<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;   }<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;   else if(flavor.equalsIgnoreCase("Vanilla")){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   fill(245, 243, 227);<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;   } else{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    println("ERROR: We don't have the flavor "+ flavor); <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    return;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ellipse(width/2,coneY - 50 - (SCOOPSIZE*scoops)/2,SCOOPSIZE,SCOOPSIZE);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;      scoops++;<br>
+}<br>
+<br>
+//Don't Touch this method!!<br>
+void addSprinkle(int numberOfSprinkles){<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i<numberOfSprinkles; i++){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fill(random(256),random(256),random(256));<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int minX = width/2-SCOOPSIZE/2 + 10;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int maxX = SCOOPSIZE/3 +width/2 +10;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int minY = coneY-((SCOOPSIZE)*scoops)/2-40;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int maxY = coneY;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int sprinkleAreaX = (int)random(minX, maxX);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int sprinkleAreaY = (int)random(minY, maxY);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v  int sprinkleWidth = (int)random(2,9);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int sprinkleHeight = (int)random(2,9);<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ellipse(sprinkleAreaX,sprinkleAreaY,sprinkleHeight,sprinkleWidth);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;  }<br>
+}<br>
+</p>
+
+
+<script src="https://league-level0.github.io/copyright.js"></script>
+
+</body></html>

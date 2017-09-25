@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<title>Level 0 - Hide the Creeper</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://league-level0.github.io/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+<body>
+
+<h1>Hide the Creeper</h1>
+
+<p class="normal">
+1. Start a new sketch with <b>draw</b> and <b>setup</b> methods.<br>
+<br>
+2. Set your canvas size</p>
+    <p class="code">
+    size(width, height)  //in setup method</p>
+
+<p class="normal">
+3. Download a background image. Something with green where creeper can hide.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Save the image.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drop the file onto your sketch.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Load it as the background</p>
+	
+	
+<p class="code">
+    PImage minecraft = loadImage("minecraft.jpg");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+    minecraft.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+	background(minecraft);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+</p>
+    
+<p class="normal">
+4. Load the creeper image into your sketch<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Download this <a href="http://bit.ly/ZpitSv">Creeper</a> to your desktop<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drop the image onto your sketch<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Use the code below to draw the image (make sure you put it in the right place)<br>
+
+        <p class="code">
+    PImage creeper;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top <br>
+    creeper=loadImage("creeper.png");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+    image(creeper, mouseX, mouseY);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in draw method<br>
+    </p>
+    
+<p class="normal">
+5. Resize the creeper image so that it is small and can hide, right after it’s loaded.	<br>
+    <p class="code">
+   creeper.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method
+    </p>
+
+<p class="normal">
+6. Pick a place to hide your creeper. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Use two variables to store the location (x and y) of the creeper, and initialize them (at the top of your sketch).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Change your code so that the creeper image is drawn at this location.<br>
+</p>
+
+<p class="normal">
+7. In the <b>draw</b> method, draw a small red ellipse where the mouse clicks.<br>
+<br>
+
+8.When mouseX and mouseY are the top left corner, draw a green ellipse instead of a red one.<br>
+<br>
+
+9. If mouseX and mouseY are near the location of your creeper, make the circle green.</p>
+    <p class="code">
+        boolean isNear(int a, int b) {<br>
+  		if (abs(a - b) < 10)<br>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>
+		else<br>
+ 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
+        }</p>
+
+<p class="normal">
+10. Let the user know that they found the creeper.<br>
+<br>
+11. Add lots more creepers… or move the creeper when they find it
+</p>
+
+<script src="https://league-level0.github.io/copyright.js"></script>
+</body></html>
