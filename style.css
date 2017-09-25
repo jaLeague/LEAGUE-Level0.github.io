@@ -4,17 +4,20 @@ body {
 
 h1 {
     color: #fa591a;
-
     text-align: center;
     font-family: verdana;
     font-size: 48px;
 }
+
 h2 {
-
+    font-size: 32px;
     text-align: center;
-
 }
 
+h3 {
+    color: #6E9806;
+    text-align: center;
+}
 
 p {
     font-family: verdana;
