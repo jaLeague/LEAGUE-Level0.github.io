@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>Level 0 - Pin the Tail</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://league-level0.github.io/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+<body>
+
+<h1>Pin the Tail on the Donkey</h1>
+
+<p class="normal">
+1. Start a new sketch with <b>draw</b> and <b>setup</b> methods.<br>
+<br>
+
+2. Download a picture of a donkey (or other animal).. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Save the image.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drop the file onto your sketch.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Load it as the background (change the file name if needed)</p>	
+<p class="code">
+    PImage donkey;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
+    donkey = loadImage("donkey.jpg");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+	background(donkey);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method</p>
+
+<p class="normal">
+3. Set your canvas size to match the size of the image. This must be the first line in the <b>setup</b> method.
+To get the size of the image, right click on the file, select "Get Info", then get the Dimensions.</p>
+    <p class="code">
+    size(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method</p>
+
+<p class="normal">
+4. Find a picture of a tail and load it into the sketch.<br>
+<p class="code">
+    PImage tail;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
+    tail = loadImage("tail.jpg");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+	image(tail, mouseX, mouseY);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in draw method</p>
+   
+<p class="normal">
+5. Draw the tail only when the mouse is clicked using mousePressed.<br>
+<br>
+6. Resize the tail to fit onto the donkey.<br>
+<i>Note: if you leave height or width as zero, the image will scale proportionally.</i>
+</p>
+<p class="code">
+tail.resize(height, width);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method
+</p>
+
+<p class="normal">
+7. Adjust the position of the tail so that it is drawn at exactly the same spot as the mouse click.
+<br>
+<p class="code">
+image(tail, mouseX-10, mouseY-20);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in draw method
+</p>
+
+<p class="normal">
+8.Make a small rectangle in the top left of the canvas. 
+If the mouse is within the rectangle show the donkey, otherwise cover the donkey up with a different background. 
+This way you can’t see the donkey when you try and pin the tail on.<br>
+<br>
+
+9.Adjust your code so the tail sticks when you click the mouse . 
+Save the coordinates of the mouse when it is clicked. Declare (make) the variables at the top of your sketch.<br>
+<br>
+
+10. Decide where the tail can be pinned to win - you could use a small rectangle to help you work out the co-ordinates..<br>
+<br>
+
+11. If the user pins the tail in the correct place, play a happy sound and let the tail pin on. 
+If not, play a sad sound and don’t pin the tail.<br>
+<br>
+First download a .wav file from freesound.org and drop it onto your sketch. </p>
+<p class="code">
+import ddf.minim.*;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the very top of your sketch<br>
+AudioSample sound1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of your sketch<br>
+Minim minim = new Minim(this);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method			<br>
+sound1 = minim.loadSample("heehaw.wav");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup<br>
+sound1.trigger();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//where you want the sound to play<br>
+</p>
+<p class="normal">
+12. Add some text to give the user instructions on how to play the game.
+<p class="code">
+  textSize(24);<br>
+  text("Message",100,20);<br>
+</p>
+
+</p>
+
+<script src="https://league-level0.github.io/copyright.js"></script>
+</body></html>
