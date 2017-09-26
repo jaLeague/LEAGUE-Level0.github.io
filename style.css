@@ -52,7 +52,12 @@ img {
 
 img.middle {
     vertical-align:
-
+}
+        
+img.footer {
+    max-width:30%;
+}
+        
 ul {
     list-style-type: none;
     margin: 0;
