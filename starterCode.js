@@ -3,6 +3,6 @@ var starter;
 
 starter = document.getElementById("starterCode");
 
-starter.innerHTML += "<h2>Starter code is provided in module Java project</h2>";
-
+starter.innerHTML += "<h2>Starter code is provided in this module's Java project.</h2>";
+  
 }
