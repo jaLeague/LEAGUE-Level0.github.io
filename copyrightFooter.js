@@ -1,5 +1,5 @@
 function copyright() {
 var footer;
 footer = document.getElementById("copyright");
-footer.innerHTML += "<p>Copyright <a href=\"http://www.jointheleague.org\">League of Amazing Programmers</a> 2013-2017</p>";
+footer.innerHTML += "Copyright <a href=\"http://www.jointheleague.org\">League of Amazing Programmers</a> 2013-2017";
 }
