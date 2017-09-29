@@ -56,6 +56,7 @@ img.middle {
         
 img.footer {
     max-height: 50px;
+    width: auto;
     display:inline-block;
 }
         
