@@ -39,7 +39,7 @@ p.code {
 }
 
 p.copyright {
-    font-famil: Arial;
+    font-family: Arial;
     font-size: 12px;
 }
 
@@ -55,7 +55,7 @@ img.middle {
 }
         
 img.footer {
-    max-width:30%;
+    height: 200px;
 }
         
 ul {
