@@ -55,7 +55,7 @@ img.middle {
 }
         
 img.footer {
-    height: 100px;
+    max-width: 20%;
 }
         
 ul {
