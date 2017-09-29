@@ -10,6 +10,6 @@ left.innerHTML += "<a href=\"http://www.jointheleague.org\"><img class=\"footer\
  
 center.innerHTML +=  "<a href=\"http://jointheleague.github.io\"><img class=\"footer\" src=\"https://league-level0.github.io/teacher.gif\" alt=\"Teacher Info\"  align=\"center\"</a>";
 
-right.innerHTML += "<a href=\"https://jtl.pike13.com\"><img class=\"footer\" src=\"https://league-level0.github.io/pike13.png\" alt=\"Legaue Hub\"  align=\"center\"></a>";
+right.innerHTML += "<a href=\"https://processing.org/reference\"><img class=\"footer\" src=\"https://league-level0.github.io/p3logo.jpeg\" alt=\"Processing Reference\"  align=\"center\"></a>";
 
 }
