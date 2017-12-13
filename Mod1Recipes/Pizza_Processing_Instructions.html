@@ -62,12 +62,23 @@ Do this in the <b>setup</b> method.</p>
 8. To play a sound when you add a topping....<br>
     First download a sound from freesound.org and drop it onto your sketch</p>
         <p class="code">
-        import processing.sound.*;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
-         SoundFile sound;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
+            
+            
+
+
+
+
+
+sound.trigger // when you want to play the sound.
+
+        import ddf.minim.*;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
+        Minim minim;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
+        AudioPlayer sound;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
          <br>
-        sound = new SoundFile(this, "ding.wav");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method<br>
+        minim = new Minim(this);           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method
+        sound = minim.loadFile("Beep.mp3"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method<br>
         <br>
-        sound.play();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//where you want the sound to play<br>
+        sound.trigger();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//where you want the sound to play<br>
         </p>
 <p class="normal">
 9. [Optional] Add a different topping with the right mouse click.</p>
