@@ -12,74 +12,124 @@
 <h1>Pin the Tail on the Donkey</h1>
 
 <p class="normal">
-1. Start a new sketch with <b>draw</b> and <b>setup</b> methods.<br>
-<br>
+    This recipe uses two bounding boxes. One is in the top left corner of the sketch, the other is a target area where the donkey tail should be pinned. In the image below, the bounding boxes are colored green to help demonstrate the concept, but you won't see them in the actual game.<br>
+    <br>
+    <img alt="PinTheTail.png" src="images/PinTheTail.png" style="width: 444.00px; height: 326.00px; margin-left: 100px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
 
-2. Download a picture of a donkey (or other animal).. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Save the image.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drop the file onto your sketch.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Load it as the background (change the file name if needed)</p>	
-<p class="code">
-    PImage donkey;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
-    donkey = loadImage("donkey.jpg");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
-	background(donkey);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method</p>
-
+    </p>
+    
+    
+    <p class="normal">
+1. Start a new sketch.
+</p>
+    
 <p class="normal">
-3. Set your canvas size to match the size of the image. This must be the first line in the <b>setup</b> method.
-To get the size of the image, right click on the file, select "Get Info", then get the Dimensions.</p>
+2. Find a picture of a donkey and  a separate picture of a tail (tail needs a transparent background). <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Save the images to your Desktop.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drag and drop each file onto your sketch.<br>
+    </p>	
+    <p class="normal">
+3.  Set the pictures into variables in this method as follows.<br><br>
+        i) First create (declare) variables to hold the images <b>at the top of the sketch</b>.</p>
     <p class="code">
-    size(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method</p>
+    PImage donkey;<br>
+    PImage tail;
+    </p>
+    <p class="normal">
+     ii) Now add a <b>setup()</b> method. This is where we put the code that will run ONCE at the start of the program.  In this method, set the variables to hold the images.</p>
+    <p class="code">
+    donkey = loadImage("donkey.jpg"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//change the file name if you need to<br>
+	tail = loadImage("tail.jpg"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//change the file name if you need to
+    </p>
+        
+<p class="normal">
+4. In the <b>setup()</b> method, set your canvas size to EXACTLY match the size of the donkey image. You can get the size of the image from the file information on the Desktop.</p>
+    <p class="code">
+    size(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//replace width, height with your picture's dimensions</p>
 
 <p class="normal">
-4. Find a picture of a tail and load it into the sketch.<br>
+5. Add a <b>draw()</b> method to your sketch. This is where we put the code that will repeat while your program is running. <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Draw the donkey and tail in this method. The tail should move around with the mouse. Try it!</p>
 <p class="code">
-    PImage tail;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
-    tail = loadImage("tail.jpg");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
-	image(tail, mouseX, mouseY);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in draw method</p>
+    background (donkey);<br>
+	image(tail, mouseX, mouseY);</p>
    
 <p class="normal">
-5. Draw the tail only when the mouse is clicked using mousePressed.<br>
-<br>
-6. Resize the tail to fit onto the donkey.<br>
-<i>Note: if you leave height or width as zero, the image will scale proportionally.</i>
+6. Change the code so the tail is only drawn when the mouse is clicked (Hint: <font color="red">mousePressed</font>). Try it!<br>
+</p>
+    
+    <p class="normal">
+7. If you need to, resize the tail to fit onto the donkey. Since this is done ONCE, put this code into the <b>setup()</b> method.<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Note: if you leave height or width as zero, the image will scale proportionally.</i>
 </p>
 <p class="code">
-tail.resize(height, width);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method
+tail.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//replace width, height with your tail's dimensions
 </p>
 
 <p class="normal">
-7. Adjust the position of the tail so that it is drawn at exactly the same spot as the mouse click.
+8. Since the top of the tail is most likely not in the top left corner of the image, you will probably have to adjust the x and y values so that the top of the tail is drawn where you click the mouse. Change the numbers below to make your image work.
 <br>
 <p class="code">
-image(tail, mouseX-10, mouseY-20);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in draw method
-</p>
+    image(tail, mouseX-10, mouseY-20);</p>
 
 <p class="normal">
-8.Make a small rectangle in the top left of the canvas. 
-If the mouse is within the rectangle show the donkey, otherwise cover the donkey up with a different background. 
-This way you can’t see the donkey when you try and pin the tail on.<br>
-<br>
-
-9.Adjust your code so the tail sticks when you click the mouse . 
-Save the coordinates of the mouse when it is clicked. Declare (make) the variables at the top of your sketch.<br>
-<br>
-
-10. Decide where the tail can be pinned to win - you could use a small rectangle to help you work out the co-ordinates..<br>
-<br>
-
-11. If the user pins the tail in the correct place, play a happy sound and let the tail pin on. 
-If not, play a sad sound and don’t pin the tail.<br>
-<br>
-First download a .wav file from freesound.org and drop it onto your sketch. </p>
+9. Now we are going to start adding bounding boxes! These should go in the draw() method, AFTER the background is drawn!<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. First draw a bounding box (rectangle) in the top left corner of the sketch.
 <p class="code">
-import ddf.minim.*;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the very top of your sketch<br>
-AudioSample sound1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of your sketch<br>
-Minim minim = new Minim(this);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method			<br>
-sound1 = minim.loadSample("heehaw.wav");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup<br>
-sound1.trigger();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//where you want the sound to play<br>
-</p>
+    rect(0, 0, 30, 30);
+    </p>
+    <p class="normal">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii. Now we need to draw another bounding box where the tail should go. You can use <font color="red">mousePressed</font> to help you figure out the x and y coordinates of the corner of this rectangle (see the picture at the top of this page for an idea of what this will look like). Example:
+    </p>
+    <p class="code">
+    rect(454, 75, 40, 40);
+    </p>
+    
 <p class="normal">
-12. Add some text to give the user instructions on how to play the game.
+10. Now, change your code so the donkey is only shown when the mouse is inside the corner bounding box. Hint: use the dist() command: </p>
+    <p class="code">
+    dist(0, 0, mouseX, mouseY) &lt; 30
+    </p>
+   
+    <p class="normal">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When the mousue is outside the corner box, you should show a solid color background.
+    </p>
+    
+<p class="normal">    
+    
+   11. Now, adjust your code so the tail sticks when you click the mouse. Hint: you will need to save the x and y values in variables at the top of your sketch.<br>
+</p>
+    
+<p class="normal"> 
+12. When the tail has been pinned, write code to check if the tail was pinned inside the target bounding box. You can use dist() like you did in Step 10 above. 
+ </p>
+    
+<p class="normal"> 
+13.    If the tail is in the right place, the player wins and you play a sound. To play a sound, drag and drop the .wav file onto your sketch, add the following code to your program.<br><br>
+    NOTE: You may need to add the minim library to your sketch. Ask your teacher if you do not know how to do this.</p>
+    
+<p class="code">
+import ddf.minim.*;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the very top of your sketch<br>
+AudioSample woohooSound;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of your sketch<br>
+boolean playSound = true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of your sketch<br>
+<br>
+Minim minim = new Minim(this);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//In the setup method<br>
+woohooSound = minim.loadSample("homer-woohoo.wav");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//In setup. Change the file name if you need to<br>
+<br>
+// put these lines where you want the sound to play<br>
+if (playSound) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;woohooSound.trigger();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;playSound = false;<br>
+}<br>
+
+</p>
+     
+<p class="normal"> 
+    14. When you have tested your pogram works, remove the line of code that draws the tail target bounding box and see if you can pin the tail on the donkey.</p>   
+    
+    
+<p class="normal">
+15. OPTION: Add some text to give the user instructions on how to play the game.
 	</p>	
 <p class="code">
   textSize(24);<br>
