@@ -13,9 +13,12 @@
 <p>//make a variable for the speed of the ball in the X direction (from left to right).
 //changing this variable should change the speed of your ball</p>
 <h3>5. Make the ball bounce off of the walls.</h3>
-<pre><code class="language-java">(x">xSpeed = -xSpeed;
+<pre>
+<code class="language-java"><span class="hljs-keyword">if</span>(x &gt; width){
+    xSpeed = -xSpeed;
 }
-</code></pre>
+</code>
+</pre>
 <h3>6. Do the same in the Y (up and down) direction.</h3>
 <p>(hint) <code>height</code></p>
 <h3>7. Add a background image for your game.</h3>
