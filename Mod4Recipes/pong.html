@@ -1,0 +1,63 @@
+<h4 id="startwithanewsketchthatcontainssetupanddrawmethodsaskyourteacherifyoudontknowhowtodothisthesuggestionsundereachstepshouldhelpyouwithyourprogram">Start with a new sketch that contains setup() and draw() methods. Ask your teacher if you don't know how to do this. The suggestions under each step should help you with your program.</h4>
+
+<h3 id="1makeacanvasforyourgame">1.Make a canvas for your game.</h3>
+
+<p><code>size(width, height) //in setup method</code></p>
+
+<p><code>background(red, green, blue) //in draw method</code></p>
+
+<h3 id="2drawaballonthescreen">2. Draw a ball on the screen.</h3>
+
+<p><code>ellipse(x, y, width, height) //in draw method</code></p>
+
+<p><code>fill(red, green, blue) //in draw method</code></p>
+
+<p><code>stroke(red, green, blue) //in draw method</code></p>
+
+<h3 id="3maketheballmoveacrossthescreenlefttoright">3. Make the ball move across the screen (left to right).</h3>
+
+<p>//make a variable for the ball's X position and change it in the draw method.</p>
+
+<h3 id="4changethespeedoftheball">4. Change the speed of the ball.</h3>
+
+<p>//make a variable for the speed of the ball in the X direction (from left to right).
+//changing this variable should change the speed of your ball</p>
+
+<h3 id="5maketheballbounceoffofthewalls">5. Make the ball bounce off of the walls.</h3>
+
+<p>~~~~ if(x > width){
+xSpeed = -xSpeed;
+}
+~~~~</p>
+
+<h3 id="6dothesameintheyupanddowndirection">6. Do the same in the Y (up and down) direction.</h3>
+
+<p>(hint) <code>height</code></p>
+
+<h3 id="7addabackgroundimageforyourgame">7. Add a background image for your game.</h3>
+
+<p><code>PImage backgroundImage; //at the top of your sketch</code>
+<code>backgroundImage = loadImage("image.jpg"); //in the setup method</code>
+<code>image(backgroundImage, 0, 0); //in draw method</code>
+<code>image(backgroundImage, 0, 0, width, height); //if you want to resize</code></p>
+
+<h3 id="8drawapaddleatthebottomofthescreen">8. Draw a paddle at the bottom of the screen</h3>
+
+<p><code>rect(x, y, width, height);</code></p>
+
+<h3 id="9makethepaddlemoveoverandbackwiththemouse">9. Make the paddle move over and back with the mouse.</h3>
+
+<p><code>mouseX</code></p>
+
+<h3 id="10maketheballchangeydirectionwhenithitsthepaddlefigureitoutbyyourselforusethis">10. Make the ball change Y direction when it hits the paddle. Figure it out by yourself, or use this</h3>
+
+<p>method:</p>
+
+<p>```java
+boolean intersects(int ballX, int ballY, int paddleX, int paddleY,
+int paddleLength) {
+    if (ballY > paddleY &amp;&amp; ballX > paddleX &amp;&amp; ballX &lt; paddleX + paddleLength)
+        return true;
+    else
+        return false;
+}</p>
