@@ -20,13 +20,14 @@
 <br>
 2. Set your canvas size</span></p>
     <p class="code">
-    size(width, height)</span></p>
+    size(width, height);</span></p>
 
 <p class="normal">
-3. Draw a biscuit colored ellipse for the pizza base, a red ellipse for sauce and a yellow ellipse inside (for the cheese). 
-Do this in the <b>setup</b> method.</p>
+3. Draw a biscuit colored ellipse for the pizza base, a red ellipse for sauce and a yellow ellipse inside (for the cheese).<br>
+    Do this in the <b>setup</b> method. You can use R,G,B values or the Processing Color Selector Tool to help you find the right colors.
+</p>
     <p class="code">
-    fill(red, green, blue);
+    fill(color);<br>
     ellipse(x, y, width, height);</p>
     
 <p class="normal">
@@ -68,10 +69,12 @@ Do this in the <b>setup</b> method.</p>
         Minim minim;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
         AudioPlayer sound;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of the sketch<br>
          <br>
-        minim = new Minim(this);           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method
-        sound = minim.loadFile("Beep.mp3"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method<br>
+        minim = new Minim(this);           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method<br>
+        sound = minim.loadFile("ding.wav"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in the setup method<br>
         <br>
-        sound.trigger();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//where you want the sound to play<br>
+        // Put next 2 lines where you want the sound to play<br>
+        sound.play();<br>
+        sound.rewind();<br>
         </p>
 <p class="normal">
 9. [Optional] Add a different topping with the right mouse click.</p>
