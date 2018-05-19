@@ -22,24 +22,24 @@
 3. Download a background image. Something with green where creeper can hide.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Save the image.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drop the file onto your sketch.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Load it as the background</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Load it as the background (it must be same size as your canvas)</p>
 	
 	
 <p class="code">
-    PImage minecraft = loadImage("minecraft.jpg");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
-    minecraft.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
-	background(minecraft);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+    PImage minecraft = loadImage("minecraft.png");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+    minecraft.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
+	background(minecraft);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
 </p>
     
 <p class="normal">
 4. Load the creeper image into your sketch<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Download this <a href="http://bit.ly/ZpitSv">Creeper</a> to your desktop<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Download this <a href="http://bit.ly/ZpitSv">Creeper</a> to your desktop (or choose another)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drop the image onto your sketch<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Use the code below to draw the image (make sure you put it in the right place)<br>
 
         <p class="code">
-    PImage creeper;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top <br>
+    PImage creeper;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of your program<br>
     creeper=loadImage("creeper.png");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
     image(creeper, mouseX, mouseY);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in draw method<br>
     </p>
@@ -63,7 +63,8 @@
 8.When mouseX and mouseY are the top left corner, draw a green ellipse instead of a red one.<br>
 <br>
 
-9. If mouseX and mouseY are near the location of your creeper, make the circle green.</p>
+9. If mouseX and mouseY are near the location of your creeper, make the circle green. <br>
+    Note: you will need to check the x and y values separately if you use the code below.</p>
     <p class="code">
         boolean isNear(int a, int b) {<br>
   		if (abs(a - b) < 10)<br>
