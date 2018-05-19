@@ -39,7 +39,7 @@
      ii) Now add a <b>setup()</b> method. This is where we put the code that will run ONCE at the start of the program.  In this method, set the variables to hold the images.</p>
     <p class="code">
     donkey = loadImage("donkey.jpg"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//change the file name if you need to<br>
-	tail = loadImage("tail.jpg"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//change the file name if you need to
+	tail = loadImage("tail.png"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//change the file name if you need to
     </p>
         
 <p class="normal">
@@ -53,13 +53,9 @@
 <p class="code">
     background (donkey);<br>
 	image(tail, mouseX, mouseY);</p>
-   
-<p class="normal">
-6. Change the code so the tail is only drawn when the mouse is clicked (Hint: <font color="red">mousePressed</font>). Try it!<br>
-</p>
     
     <p class="normal">
-7. If you need to, resize the tail to fit onto the donkey. Since this is done ONCE, put this code into the <b>setup()</b> method.<br>
+6. If you need to, resize the tail to fit onto the donkey. Since this is done ONCE, put this code into the <b>setup()</b> method.<br>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Note: if you leave height or width as zero, the image will scale proportionally.</i>
 </p>
 <p class="code">
@@ -67,13 +63,13 @@ tail.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//replace width, height
 </p>
 
 <p class="normal">
-8. Since the top of the tail is most likely not in the top left corner of the image, you will probably have to adjust the x and y values so that the top of the tail is drawn where you click the mouse. Change the numbers below to make your image work.
+7. If the top of the tail is not in the top left corner of your image, you will have to adjust the x and y values so that the top of the tail is drawn where you click the mouse. To do this, you would need to adjust the x and y values to make your image work as shown below.
 <br>
 <p class="code">
     image(tail, mouseX-10, mouseY-20);</p>
 
 <p class="normal">
-9. Now we are going to start adding bounding boxes! These should go in the draw() method, AFTER the background is drawn!<br><br>
+8. Now we are going to start adding bounding boxes! These should go in the draw() method, AFTER the background is drawn!<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. First draw a bounding box (rectangle) in the top left corner of the sketch.
 <p class="code">
     rect(0, 0, 30, 30);
@@ -86,7 +82,7 @@ tail.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//replace width, height
     </p>
     
 <p class="normal">
-10. Now, change your code so the donkey is only shown when the mouse is inside the corner bounding box. Hint: use the dist() command: </p>
+9. Now, change your code so the donkey is only shown when the mouse is inside the corner bounding box. Hint: use the dist() command: </p>
     <p class="code">
     dist(0, 0, mouseX, mouseY) &lt; 30
     </p>
@@ -97,15 +93,15 @@ tail.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//replace width, height
     
 <p class="normal">    
     
-   11. Now, adjust your code so the tail sticks when you click the mouse. Hint: you will need to save the x and y values in variables at the top of your sketch.<br>
+   10. Now, adjust your code so the tail sticks when you click the mouse (this means it will no longer move when the mouse moves). Hint: you will need to save the x and y values in variables at the top of your sketch.<br>
 </p>
     
 <p class="normal"> 
-12. When the tail has been pinned, write code to check if the tail was pinned inside the target bounding box. You can use dist() like you did in Step 10 above. 
- </p>
+11. When the tail has been pinned, write code to check if the tail was pinned inside the target bounding box. You can use dist() like you did earlier, or you can write your own code to check it another way. Show the donkey so the user knows where they pinned the tail.
+</p>
     
 <p class="normal"> 
-13.    If the tail is in the right place, the player wins and you play a sound. To play a sound, drag and drop the .wav file onto your sketch, add the following code to your program.<br><br>
+12.    If the tail is in the right place, the player wins and you play a sound. To play a sound, drag and drop the .wav file onto your sketch, and add the following code to your program.<br><br>
     NOTE: You may need to add the minim library to your sketch. Ask your teacher if you do not know how to do this.</p>
     
 <p class="code">
@@ -125,11 +121,11 @@ if (playSound) {<br>
 </p>
      
 <p class="normal"> 
-    14. When you have tested your pogram works, remove the line of code that draws the tail target bounding box and see if you can pin the tail on the donkey.</p>   
+    13. When you have tested that your pogram works, remove the line of code that draws the tail target bounding box and see if you can pin the tail on the donkey.</p>   
     
     
 <p class="normal">
-15. OPTION: Add some text to give the user instructions on how to play the game.
+14. OPTION: Add some text to give the user instructions on how to play the game.
 	</p>	
 <p class="code">
   textSize(24);<br>
