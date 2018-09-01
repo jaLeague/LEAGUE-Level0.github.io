@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+	font-family: verdana;
+    color: #fa591a;
+    text-align: center;
+    font-size: 48px;
+}
+
+h2 {
+    font-family: verdana;
+    color: #fa591a;
+    font-size: 32px;
+    text-align: center;
+}
+
+h3 {
+    font-family: verdana;
+    font-size: 24px;
+    text-align: center;
+}
+
+h4 {
+    font-family: verdana;
+}
+
+p {
+    font-size: 1em;
+}
+
+p.normal {
+    font-family: verdana;
+    font-size: 16px;
+}
+
+p.code {
+    color: #1E9806;
+    font-family: Courier;
+    font-size: 16px;
+    padding-left: 50px;
+}
+
+hr {
+    margin:auto;
+    margin-top:.5em;
+    margin-bottom:.5em;
+    width:40%
+}
+
+.module {
+	padding: 2em;
+}
+
+.module .titleBar {
+	background-color:#f26522;
+	border: 1px solid black;
+	border-radius: 25px 25px 0px 0px;
+	padding:.5em;
+}
+
+.module .description {
+	background-color:#d6d8db;
+	border: 1px solid black;
+	border-radius: 0px 0px 25px 25px;
+	border-top: 0px;
+	padding:1em;
+}	
+
+.module .links {
+	text-align:center;
+	padding-left:2em;
+}
+
+.module .links a {
+	padding-right:2em;
+	color:#d2d4d8;
+}
+
+.module ul {
+	padding-left: 2em;
+	list-style-type: circle;
+}
+
+.module p {
+	padding:1em;
+}
+
+.module h3{
+    font-family: "Raleway", sans-serif;
+}
+
+.overviewModules {
+    width: 100%;
+    padding:1em;
+    margin: 0 auto;
+}
+
+.overviewModules .module {
+    padding:.5em;
+    float: left;
+    width:15%;
+    min-width: 12em;
+    text-align: center;
+}
+
+.overviewModules .module ul {
+    padding: 0em;
+    list-style: none;
+    width: 100%; 
+}
+
+.overviewModules .module h3{
+    font-family: "Raleway", sans-serif;
+}
+
+.overviewModules .module h4{
+    padding-top:1em;
+    font-size: 1.1em;
+}
+
+.overviewModules .description {
+    padding-top: .5em;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.overviewLegend{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+    font-family:monospace;
+}
+
+.overviewModules .checkpoint{
+    background-color:#acadaf;
+	border: 1px solid black;
+	border-radius: 0px 0px 25px 25px;
+	border-top: 0px;
+	padding:1em;
+    padding-top: 0em;
+}
+
+.linkPageBody {
+    padding: 5em 0;
+}
+
+.linkPageBody h3 {
+    font-family: "Raleway", sans-serif;
+    padding:.5em;
+} 
+
+.contributingBody {
+    margin:auto;
+    width:80%;
+    padding: 80px
+}
+
+.contributingBody h2 {
+    font-family: "Raleway", sans-serif;
+    padding:.5em;
+}
+
+.moduleIndex {
+    margin:auto;
+    width:80%;
+    padding: 80px
+}
+
+.moduleIndex h1 {
+    padding:.5em;
+}
+
+.moduleIndex h2 {
+    font-family: "Raleway", sans-serif;
+    padding:.5em;
+}
+
+.moduleIndex h3 {
+    font-family: "Raleway", sans-serif;
+    padding:.5em;
+}
+.moduleIndexColumn {
+    float: left; 
+    width: 33%;
+}
+
+/*the wrap, main, and footer divs make the footer stick to the bottom of the screen*/
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 75px;
+}
+
+#footer {
+  position: relative;
+  margin-top: -75px;
+  height: 75px;
+  clear: both;
+}
+
+#leftColumn {
+    
+float: left;
+	width: 50%;
+   
+}
+
+#rightColumn {
+	float: right;
+	width: 50%;
+}
+
+img.footer {
+    max-height: 75px;
+    width: auto;
+    display:inline-block;
+}
+
+/* Opera fix for footer*/
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+
+/* Makes modules float correctly instead of getting stuck on each other when the window is resized */
+@media only screen and (min-width: 425px) {
+    .overviewModules .module {
+        height: 55em;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .overviewModules .module {
+        float:none;
+        margin:0 auto;
+        margin-left: 8%;
+        width:70%;
+    }
+    
+}
