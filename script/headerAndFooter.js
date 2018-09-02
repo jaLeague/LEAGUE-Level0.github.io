@@ -4,12 +4,12 @@ function addHeader() {
     links = document.getElementById("header");
 
     links.innerHTML += "<span>";
-    links.innerHTML += "<a href=\"http://www.jointheleague.org\"><img class=\"footer\" src=\"img/league.jpg\" alt=\"league-logo\"></a>";
+    links.innerHTML += "<a href=\"http://www.jointheleague.org\"><img class=\"footer\" src=\"https://league-level0.github.io/img/league.jpg\" alt=\"league-logo\"></a>";
     links.innerHTML += "</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>";
-    links.innerHTML += "<a href=\"http://jointheleague.github.io\"><img class=\"footer\" src=\"img/teacher.png\" alt=\"Teacher Resources\"</a>";
+    links.innerHTML += "<a href=\"http://jointheleague.github.io\"><img class=\"footer\" src=\"https://league-level0.github.io/img/teacher.png\" alt=\"Teacher Resources\"</a>";
     links.innerHTML += "</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>";
-    links.innerHTML += "<a href=\"https://jtl.pike13.com\"><img class=\"footer\" src=\"img/pike13.png\" alt=\"Legaue Hub\"></a>";
-    links.innerHTML += "<a href=\"mailto:curriculum@jointheleague.org\"><img class=\"footer\" src=\"img/suggestions.jpg\" alt=\"Recipe Suggestions\"</a>";  
+    links.innerHTML += "<a href=\"https://jtl.pike13.com\"><img class=\"footer\" src=\"https://league-level0.github.io/img/pike13.png\" alt=\"Legaue Hub\"></a>";
+    links.innerHTML += "<a href=\"mailto:curriculum@jointheleague.org\"><img class=\"footer\" src=\"https://league-level0.github.io/img/suggestions.jpg\" alt=\"Recipe Suggestions\"</a>";  
     links.innerHTML += "</span>";
 }
 
@@ -17,7 +17,7 @@ function addFooter() {
 
     var footer = document.getElementById("footer");
 
-    footer.innerHTML += "<a href=\"http://www.jointheleague.org\"><img class=\"footer\" src=\"img/league.jpg\" alt=\"league-logo\" align=\"center\"></a>";
+    footer.innerHTML += "<a href=\"http://www.jointheleague.org\"><img class=\"footer\" src=\"https://league-level0.github.io/img/league.jpg\" alt=\"league-logo\" align=\"center\"></a>";
 
     footer.innerHTML += "Copyright <a href=\"http://www.jointheleague.org\">The League of Amazing Programmers</a> 2013-2018";
 

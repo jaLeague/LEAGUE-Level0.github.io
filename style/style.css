@@ -1,16 +1,16 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
-  height: 100%;
-  font-family: "Raleway", sans-serif;
+    height: 100%;
+    font-family: "Raleway", sans-serif;
 }
 
 h1 {
-	font-family: verdana;
+    font-family: verdana;
     color: #fa591a;
     text-align: center;
     font-size: 48px;
@@ -57,41 +57,41 @@ hr {
 }
 
 .module {
-	padding: 2em;
+    padding: 2em;
 }
 
 .module .titleBar {
-	background-color:#f26522;
-	border: 1px solid black;
-	border-radius: 25px 25px 0px 0px;
-	padding:.5em;
+    background-color:#f26522;
+    border: 1px solid black;
+    border-radius: 25px 25px 0px 0px;
+    padding:.5em;
 }
 
 .module .description {
-	background-color:#d6d8db;
-	border: 1px solid black;
-	border-radius: 0px 0px 25px 25px;
-	border-top: 0px;
-	padding:1em;
+    background-color:#d6d8db;
+    border: 1px solid black;
+    border-radius: 0px 0px 25px 25px;
+    border-top: 0px;
+    padding:1em;
 }	
 
 .module .links {
-	text-align:center;
-	padding-left:2em;
+    text-align:center;
+    padding-left:2em;
 }
 
 .module .links a {
-	padding-right:2em;
-	color:#d2d4d8;
+    padding-right:2em;
+    color:#d2d4d8;
 }
 
 .module ul {
-	padding-left: 2em;
-	list-style-type: circle;
+    padding-left: 2em;
+    list-style-type: circle;
 }
 
 .module p {
-	padding:1em;
+    padding:1em;
 }
 
 .module h3{
@@ -141,10 +141,10 @@ hr {
 
 .overviewModules .checkpoint{
     background-color:#acadaf;
-	border: 1px solid black;
-	border-radius: 0px 0px 25px 25px;
-	border-top: 0px;
-	padding:1em;
+    border: 1px solid black;
+    border-radius: 0px 0px 25px 25px;
+    border-top: 0px;
+    padding:1em;
     padding-top: 0em;
 }
 
@@ -175,7 +175,7 @@ hr {
 }
 
 .moduleIndex h1 {
-    padding:.5em;
+    padding:none;
 }
 
 .moduleIndex h2 {
@@ -187,6 +187,62 @@ hr {
     font-family: "Raleway", sans-serif;
     padding:.5em;
 }
+
+#moduleButtonForm{
+    padding-bottom: 1.5em;
+    min-width: 15%;
+}
+
+#acceptModuleButton {
+    font-family: "Raleway", sans-serif;
+    background-color: #abaca5;
+    border-radius: 25px;
+    color: white;
+    padding: .3em 1.5em;
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    margin: 0 auto;
+    width:20%;
+    outline:none;
+    transition: all 0.5s;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+
+#acceptModuleButton:hover {
+    background-color: #f26522; /* Green */
+    color: white;
+}
+
+#acceptModuleButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#acceptModuleButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#acceptModuleButton:hover span {
+    padding-right: 25px;
+}
+
+#acceptModuleButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 .moduleIndexColumn {
     float: left; 
     width: 33%;
@@ -194,31 +250,31 @@ hr {
 
 /*the wrap, main, and footer divs make the footer stick to the bottom of the screen*/
 #wrap {
-  min-height: 100%;
+    min-height: 100%;
 }
 
 #main {
-  overflow: auto;
-  padding-bottom: 75px;
+    overflow: auto;
+    padding-bottom: 75px;
 }
 
 #footer {
-  position: relative;
-  margin-top: -75px;
-  height: 75px;
-  clear: both;
+    position: relative;
+    margin-top: -75px;
+    height: 75px;
+    clear: both;
 }
 
 #leftColumn {
-    
-float: left;
-	width: 50%;
-   
+
+    float: left;
+    width: 50%;
+
 }
 
 #rightColumn {
-	float: right;
-	width: 50%;
+    float: right;
+    width: 50%;
 }
 
 img.footer {
@@ -229,11 +285,11 @@ img.footer {
 
 /* Opera fix for footer*/
 body:before {
-  content: "";
-  height: 100%;
-  float: left;
-  width: 0;
-  margin-top: -32767px;
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
 }
 
 /* Makes modules float correctly instead of getting stuck on each other when the window is resized */
@@ -250,5 +306,5 @@ body:before {
         margin-left: 8%;
         width:70%;
     }
-    
+
 }
