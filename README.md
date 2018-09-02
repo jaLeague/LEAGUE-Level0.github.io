@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html>
-<title>League Level 0</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://level0.jointheleague.org/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<script src="http://league-level0.github.io/copyrightFooter.js"></script>
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-</style>
 <body>
     <div class="w3-display-topleft w3-padding-large w3-xlarge">
    	  <h1 class="w3-jumbo w3-animate-top">League Level 0   </h1>
