@@ -24,7 +24,7 @@ h2 {
 }
 
 h3 {
-    font-family: verdana;
+    font-family: "Raleway", sans-serif;
     font-size: 24px;
     text-align: center;
 }
@@ -57,7 +57,7 @@ hr {
 }
 
 .module {
-    padding: 2em;
+    padding: 1em;
 }
 
 .module .titleBar {
@@ -94,10 +94,6 @@ hr {
     padding:1em;
 }
 
-.module h3{
-    font-family: "Raleway", sans-serif;
-}
-
 .overviewModules {
     width: 100%;
     padding:1em;
@@ -107,19 +103,16 @@ hr {
 .overviewModules .module {
     padding:.5em;
     float: left;
-    width:15%;
     min-width: 12em;
     text-align: center;
+    width:15%;
+    height:55em;
 }
 
 .overviewModules .module ul {
     padding: 0em;
     list-style: none;
     width: 100%; 
-}
-
-.overviewModules .module h3{
-    font-family: "Raleway", sans-serif;
 }
 
 .overviewModules .module h4{
@@ -158,9 +151,9 @@ hr {
 } 
 
 .contributingBody {
-    margin:auto;
+    margin:0 auto;
     width:80%;
-    padding: 80px
+    padding-top: 5em;
 }
 
 .contributingBody h2 {
@@ -171,7 +164,7 @@ hr {
 .moduleIndex {
     margin:auto;
     width:80%;
-    padding: 80px
+    padding: 80px;
 }
 
 .moduleIndex h1 {
@@ -204,48 +197,41 @@ hr {
     text-decoration: none;
     font-size: 1.3em;
     margin: 0 auto;
-    width:20%;
     outline:none;
-    transition: all 0.5s;
     cursor: pointer;
+    min-width: 3em;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
 
-
 #acceptModuleButton:hover {
-    background-color: #f26522; /* Green */
+    background-color: #f26522;
     color: white;
+    border-radius: 10px;
 }
 
 #acceptModuleButton span {
     cursor: pointer;
     display: inline-block;
     position: relative;
-    transition: 0.5s;
 }
 
 #acceptModuleButton span:after {
     content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-#acceptModuleButton:hover span {
-    padding-right: 25px;
-}
-
-#acceptModuleButton:hover span:after {
-    opacity: 1;
-    right: 0;
+    padding-left:.5em;
 }
 
 .moduleIndexColumn {
     float: left; 
     width: 33%;
+    min-width: 20em;
+}
+
+.teachersPage {
+    max-width:50em;
+    min-width:20em;
+    margin: 0 auto;
+    padding-top:1em;
 }
 
 /*the wrap, main, and footer divs make the footer stick to the bottom of the screen*/
@@ -263,6 +249,7 @@ hr {
     margin-top: -75px;
     height: 75px;
     clear: both;
+    font-size: .7em;
 }
 
 #leftColumn {
@@ -275,6 +262,10 @@ hr {
 #rightColumn {
     float: right;
     width: 50%;
+}
+
+#singleColumn {
+    
 }
 
 img.footer {
@@ -293,18 +284,19 @@ body:before {
 }
 
 /* Makes modules float correctly instead of getting stuck on each other when the window is resized */
-@media only screen and (min-width: 425px) {
+@media only screen and (max-width: 768px) {
     .overviewModules .module {
-        height: 55em;
+        float:none;
+        width:70%;
+        margin:0 auto;
+        margin-left: 8%;
+        height:100%;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (min-width: 768px) {
     .overviewModules .module {
-        float:none;
-        margin:0 auto;
-        margin-left: 8%;
-        width:70%;
+        
     }
 
 }
