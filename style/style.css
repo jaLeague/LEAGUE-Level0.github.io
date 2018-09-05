@@ -56,10 +56,6 @@ hr {
     width:40%
 }
 
-.module {
-    padding: 1em;
-}
-
 .module .titleBar {
     background-color:#f26522;
     border: 1px solid black;
@@ -94,13 +90,24 @@ hr {
     padding:1em;
 }
 
-.overviewModules {
+#teachersPage {
+    max-width:50em;
+    min-width:20em;
+    margin: 0 auto;
+    padding-top:1em;
+}
+
+#teachersPage .module {
+    padding: 1em;
+}
+
+#overviewPage {
     width: 100%;
     padding:1em;
     margin: 0 auto;
 }
 
-.overviewModules .module {
+#overviewPage .module {
     padding:.5em;
     float: left;
     min-width: 12em;
@@ -109,30 +116,23 @@ hr {
     height:55em;
 }
 
-.overviewModules .module ul {
+#overviewPage .module ul {
     padding: 0em;
     list-style: none;
     width: 100%; 
 }
 
-.overviewModules .module h4{
+#overviewPage .module h4{
     padding-top:1em;
     font-size: 1.1em;
 }
 
-.overviewModules .description {
+#overviewPage .description {
     padding-top: .5em;
     border-radius: 0px 0px 0px 0px;
 }
 
-.overviewLegend{
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.2em;
-    font-family:monospace;
-}
-
-.overviewModules .checkpoint{
+#overviewPage .checkpoint{
     background-color:#acadaf;
     border: 1px solid black;
     border-radius: 0px 0px 25px 25px;
@@ -141,43 +141,50 @@ hr {
     padding-top: 0em;
 }
 
-.linkPageBody {
+#overviewLegend{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+    font-family:monospace;
+}
+
+#linkPageBody {
     padding: 5em 0;
 }
 
-.linkPageBody h3 {
+#linkPageBody h3 {
     font-family: "Raleway", sans-serif;
     padding:.5em;
 } 
 
-.contributingBody {
+#contributingBody {
     margin:0 auto;
     width:80%;
     padding-top: 5em;
     padding-bottom: 5em;
 }
 
-.contributingBody h2 {
+#contributingBody h2 {
     font-family: "Raleway", sans-serif;
     padding:.5em;
 }
 
-.moduleIndex {
+#moduleIndex {
     margin:auto;
     width:80%;
     padding: 80px;
 }
 
-.moduleIndex h1 {
+#moduleIndex h1 {
     padding:none;
 }
 
-.moduleIndex h2 {
+#moduleIndex h2 {
     font-family: "Raleway", sans-serif;
     padding:.5em;
 }
 
-.moduleIndex h3 {
+#moduleIndex h3 {
     font-family: "Raleway", sans-serif;
     padding:.5em;
 }
@@ -243,12 +250,6 @@ hr {
     min-width: 20em;
 }
 
-.teachersPage {
-    max-width:50em;
-    min-width:20em;
-    margin: 0 auto;
-    padding-top:1em;
-}
 
 /*the wrap, main, and footer divs make the footer stick to the bottom of the screen*/
 #wrap {
@@ -269,19 +270,13 @@ hr {
 }
 
 #leftColumn {
-
     float: left;
     width: 50%;
-
 }
 
 #rightColumn {
     float: right;
     width: 50%;
-}
-
-#singleColumn {
-    
 }
 
 img.footer {
@@ -299,9 +294,8 @@ body:before {
     margin-top: -32767px;
 }
 
-
 @media only screen and (max-width: 768px) {
-    .overviewModules .module {
+    #overviewPage .module {
         float:none;
         width:70%;
         margin:0 auto;
