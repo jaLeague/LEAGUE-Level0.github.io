@@ -182,6 +182,21 @@ hr {
     padding:.5em;
 }
 
+#recipePage {
+    padding-top:5em;
+    margin: 0 auto;
+}
+
+#recipePage p {
+    padding:10em;
+    align-content: center;
+    min-width: 30%;
+}
+
+#recipePage h1 {
+    font-family: "Raleway", sans-serif;
+}
+
 #moduleButtonForm{
     padding-bottom: 1.5em;
     min-width: 15%;
@@ -284,7 +299,7 @@ body:before {
     margin-top: -32767px;
 }
 
-/* Makes modules float correctly instead of getting stuck on each other when the window is resized */
+
 @media only screen and (max-width: 768px) {
     .overviewModules .module {
         float:none;
@@ -293,11 +308,4 @@ body:before {
         margin-left: 8%;
         height:100%;
     }
-}
-
-@media only screen and (min-width: 768px) {
-    .overviewModules .module {
-        
-    }
-
 }
