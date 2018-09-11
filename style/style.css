@@ -194,14 +194,29 @@ hr {
     margin: 0 auto;
 }
 
-#recipePage p {
-    padding:10em;
-    align-content: center;
-    min-width: 30%;
-}
-
 #recipePage h1 {
     font-family: "Raleway", sans-serif;
+}
+
+#recipePage h2 {
+float:left;
+padding-left: 10%;
+}
+
+#recipePage p {
+    float:left;
+}
+
+#recipePage ol {
+    float:left;
+    padding-left:-10%;
+}
+
+#recipePage img {
+    width:30%;
+    display:block;
+    margin: 0 auto;
+    padding-top:1em;
 }
 
 #moduleButtonForm{
