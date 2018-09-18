@@ -192,6 +192,11 @@ hr {
 #recipePage {
     padding-top:5em;
     margin: 0 auto;
+    background:#d2d4d8;
+    padding:1em;
+    width:80%;
+    height:100em;
+    margin-top:1em;
 }
 
 #recipePage h1 {
@@ -199,8 +204,8 @@ hr {
 }
 
 #recipePage h2 {
-float:left;
-padding-left: 10%;
+    float:left;
+    padding-left: 10%;
 }
 
 #recipePage p {
@@ -257,6 +262,11 @@ padding-left: 10%;
 #acceptModuleButton span:after {
     content: '\00bb';
     padding-left:.5em;
+}
+
+#backArrows {
+    font-size: 5em;
+    background:red;
 }
 
 .moduleIndexColumn {

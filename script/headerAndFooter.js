@@ -30,3 +30,20 @@ function addFooter() {
 
 
 }
+
+function addRecipeHeader(){
+    
+        
+    var links;
+
+    links = document.getElementById("header");
+    
+    links.innerHTML += "<span>";
+     links.innerHTML += "<a style='font-size:3em;color: #fa591a;text-decoration: none;cursor: pointer;padding:.5em;' onclick=' window.history.back();'>&#171;</a>"
+
+    links.innerHTML += "</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>";
+}
+
+function goBack() {
+   
+}
