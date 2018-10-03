@@ -195,26 +195,12 @@ hr {
     background:#d2d4d8;
     padding:1em;
     width:80%;
-    height:100em;
+    height:100%;
     margin-top:1em;
 }
 
 #recipePage h1 {
     font-family: "Raleway", sans-serif;
-}
-
-#recipePage h2 {
-    float:left;
-    padding-left: 10%;
-}
-
-#recipePage p {
-    float:left;
-}
-
-#recipePage ol {
-    float:left;
-    padding-left:-10%;
 }
 
 #recipePage img {
@@ -224,6 +210,40 @@ hr {
     padding-top:1em;
 }
 
+#recipeTitle {
+    
+}
+
+#recipeBody{
+}
+
+#recipeBody h2 {
+    float:left;
+}
+
+#recipePage ol {
+    float:left;
+    width:100%;
+    padding-left:1em;
+}
+
+#recipePage li {
+   padding-top:1em;
+}
+
+#recipePage p {
+    float:left;
+    width:100%;
+}
+
+#recipeBody #recipeGoal {
+    padding:5em;
+}
+
+#recipeBody #recipeSteps {
+    padding:5em;
+    padding-top:0em;
+}
 #moduleButtonForm{
     padding-bottom: 1.5em;
     min-width: 15%;

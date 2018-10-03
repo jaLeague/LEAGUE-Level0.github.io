@@ -19,8 +19,11 @@ function addFooter() {
 
     footer.innerHTML += "<a href=\"http://www.jointheleague.org\"><img class=\"footer\" src=\"https://league-level0.github.io/img/league.jpg\" alt=\"league-logo\" align=\"center\"></a>";
 
-    footer.innerHTML += "<span style=\"position:absolute;bottom:20px;\">Copyright <a href=\"http://www.jointheleague.org\">The League of Amazing Programmers</a> 2013-2018</span>";
+    footer.innerHTML += "<span style=\"position:absolute;bottom:20px;font-weight: bold;\">Copyright <a href=\"http://www.jointheleague.org\">The League of Amazing Programmers</a> 2013-2018</span>";
 
+    footer.innerHTML += "<span style=\"position:absolute;bottom:42px;\">The League is a social enterprise school dedicated to teaching programming to kids.</span>"
+    
+    footer.innerHTML += "<span style=\"position:absolute;bottom:32px;\"><a href=\"http://www.jointheleague.org/about\">Learn More</a> about The League, or <a href=\"http://www.jointheleague.org/contact/\">contact us</a> to learn how you can license our Amazing curriculum!</span>";
     //footer.innerHTML += "References:";
 
     //footer.innerHTML += "<a href=\"https://docs.oracle.com/javase/8/docs/api/\"><img class=\"footer\" src=\"https://league-level0.github.io/java.png\" alt=\"Java API\"  align=\"center\"</a>";
@@ -40,10 +43,5 @@ function addRecipeHeader(){
     
     links.innerHTML += "<span>";
      links.innerHTML += "<a style='font-size:3em;color: #fa591a;text-decoration: none;cursor: pointer;padding:.5em;' onclick=' window.history.back();'>&#171;</a>"
-
-    links.innerHTML += "</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>";
-}
-
-function goBack() {
-   
+    
 }
