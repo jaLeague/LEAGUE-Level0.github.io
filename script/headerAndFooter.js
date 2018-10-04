@@ -30,8 +30,6 @@ function addFooter() {
 
     //footer.innerHTML += "<a href=\"https://processing.org/reference\"><img class=\"footer\" src=\"https://league-level0.github.io/p3logo.jpeg\" alt=\"Processing Reference\"  align=\"center\"></a>";
 
-
-
 }
 
 function addRecipeHeader(){
@@ -45,3 +43,10 @@ function addRecipeHeader(){
      links.innerHTML += "<a style='font-size:3em;color: #fa591a;text-decoration: none;cursor: pointer;padding:.5em;' onclick=' window.history.back();'>&#171;</a>"
     
 }
+
+function copyDivToClipboard() {
+            var range = document.getSelection().getRangeAt(0);
+            range.selectNode(document.getElementByClassName("code")[0]);
+            window.getSelection().addRange(range);
+            document.execCommand("copy")
+        }

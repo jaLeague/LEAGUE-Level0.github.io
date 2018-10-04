@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html>
-<title>Level 0 - Googly Eyes</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://league-level0.github.io/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <head>
+        <title>League Level 0</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../style/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="icon" type="image/png" href="../../img/favicon.png">
+        <script src="../../script/headerAndFooter.js"></script>
+        
+    </head>
 
+    <body>
+        <div id ="wrap">
+            <div id ="main">
+                <div id="header">
+                    <script>addRecipeHeader();</script>
+                </div>
+                <div id = "recipePage">
+                    <div id="recipeTitle">
+                        <h1>Googly Eyes</h1>
+                        <hr>
+                        <img src="images/googlyEyes.png" alt="Googly image">
+                    </div>
+                    <div id ="recipeBody">
+                        <div id="recipeGoal">
+                            <h2>Goal:</h2>
+                            <p class="normal">
+                                We’re going to make an image with eyes that follow our mouse!
+                            </p>
+                        </div>
+                        <div id="recipeSteps">
+                            <h2>Steps:</h2>
+                            <ol>
+                                <li>Create a new sketch in Processing and add setup() and draw() methods.</li>
 
-<body>
+                                <li>Find an image on the internet and drop it into your sketch.  It can be anything as long as it has eyes!</li>
 
-<h1>Googly Eyes</h1>
+                                <li>In your setup() method, import your image using the following code:</li>
+                                <pre class="code">
+                                    PImage face = loadImage(“face.jpg”);
+                                    background(face);
+                                </pre>
 
+                                <li>Change the code you just entered so that “face.jpg” matches the name of your picture.  </li>
 
+                                <li>Set the size of your sketch and the size of your image to be the same.  Enter the following code between the previous two lines you entered: </li>       
+                                    <pre class="code">
+                                    size(800,600);         
+                                    face.resize(width,height);
+                                    </pre>
+                                
 
-<p class="normal">
-These eyes will watch the mouse as it moves around the screen.<br>
-<br>
-1. Start a new sketch with <b>setup()</b> and <b>draw()</b> methods.<br>
-<br>
-2. In the draw method, create eyeballs so that they eyes look like this:<br>
-<br>
-<img alt="eyeballs.png" src="images/eyeballs.png" style="width: 374.00px; height: 138.00px; margin-left: 100px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""><br>
-<br>
-3. Use <b>mouseX</b> and <b>mouseY</b> to move the left pupil when the mouse moves.<br>
-<br>
-4. Now move the right pupil by setting it to <b>mouseX + [some-distance]</b><br>
-<br>
-5. Next, stop the pupils from going outside the eyes. To do this, imagine a rectangle that the pupil should stay within. 
-When <b>mouseX</b> or <b>mouseY</b> goes outside of these bounds, set it back to the boundary. 
-Put this code before you draw the ellipses.<br>
-<br>
-<img alt="boundingBox.png" src="images/boundingBox.png" style="width: 250.00px; height: 158.00px; margin-left: 100px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""><br>
-<br>
-<br>
-6. OPTIONAL: Put a face behind the eyes. Load an image in the <b>setup</b> method like this:</p>
+                                <li>In your draw() method, place a white ellipse over the left eye of your image.  </li>
 
-<p class="code">
-PImage face = loadImage(&quot;face.jpeg&quot;);<br>
-image(face, 0, 0);
-</p>
+                                <li>Now add a pupil to the left eye (i.e. the black part).</li>
 
-<a href="https://processing.org/reference">
-    <img src="https://league-level0.github.io/p3logo.jpeg" class="footer" alt="Processing Reference"></a>
-  
-<script src="https://league-level0.github.io/copyright.js"></script>
+                                <li>Use mouseX and mouseY to move the left pupil when the mouse moves.  </li>
 
-</body></html>
+                                <li>Add a white ellipse over the right eye.</li>
+
+                                <li>Add a right pupil and make it move by using mouseX + [some distance] and mouseY + [some distance].</li>
+
+                                <li>Here’s the tricky part: stop the pupils from going outside of the eyes!  To do this, imagine a rectangle that the pupil should stay within.  When mouseX and mouseY goes outside of these bounds, set it back to the boundary.  Put this code before you draw the ellipses.  </li>
+
+                            </ol>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <script>addFooter();</script>
+        </div>
+    </body>   
+</html>

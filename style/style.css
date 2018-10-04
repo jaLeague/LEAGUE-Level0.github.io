@@ -49,6 +49,16 @@ p.code {
     padding-left: 50px;
 }
 
+pre.code {
+    font-size:1.15em;
+    font-family:Courier New;
+    
+    color: #1E9806;
+    font-family: Courier;
+    font-size: 16px;
+    padding-left: 50px;
+}
+
 hr {
     margin:auto;
     margin-top:.5em;
@@ -102,7 +112,7 @@ hr {
 }
 
 #overviewPage {
-    width: 100%;
+    width: 1500px;
     padding:1em;
     margin: 0 auto;
 }
@@ -215,6 +225,7 @@ hr {
 }
 
 #recipeBody{
+    
 }
 
 #recipeBody h2 {
@@ -225,19 +236,25 @@ hr {
     float:left;
     width:100%;
     padding-left:1em;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding-top:.5em;
 }
 
 #recipePage li {
-   padding-top:1em;
+   padding-bottom:1em;
 }
 
 #recipePage p {
     float:left;
     width:100%;
+    font-size: 1.15em;
+    padding-top:.5em;
 }
 
 #recipeBody #recipeGoal {
     padding:5em;
+    padding-bottom:7em;
 }
 
 #recipeBody #recipeSteps {
@@ -340,11 +357,21 @@ body:before {
 }
 
 @media only screen and (max-width: 768px) {
+    #overviewPage {
+        width:100%;
+    }
     #overviewPage .module {
         float:none;
         width:70%;
         margin:0 auto;
         margin-left: 8%;
         height:100%;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    body {
+        overflow-x: auto;
     }
 }
