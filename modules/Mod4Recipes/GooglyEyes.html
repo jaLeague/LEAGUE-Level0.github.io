@@ -37,20 +37,21 @@
 
                                 <li>Find an image on the internet and drop it into your sketch.  It can be anything as long as it has eyes!</li>
 
-                                <li>In your setup() method, import your image using the following code:</li>
-                                <pre class="code">
+                                <li>In your setup() method, import your image using the following code:
+                                    <pre>
+                                    
                                     PImage face = loadImage(“face.jpg”);
                                     background(face);
-                                </pre>
-
+                                    </pre>
+                                </li>
                                 <li>Change the code you just entered so that “face.jpg” matches the name of your picture.  </li>
 
-                                <li>Set the size of your sketch and the size of your image to be the same.  Enter the following code between the previous two lines you entered: </li>       
-                                    <pre class="code">
-                                    size(800,600);         
+                                <li>Set the size of your sketch and the size of your image to be the same.  Enter the following code between the previous two lines you entered:     
+                                    <pre>   
+                                    size(800,600);
                                     face.resize(width,height);
                                     </pre>
-                                
+                                </li>
 
                                 <li>In your draw() method, place a white ellipse over the left eye of your image.  </li>
 
