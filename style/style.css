@@ -64,6 +64,7 @@ pre{
     margin: 0 auto;
     margin-top: 1em;
     overflow:auto;
+    
 
 }
 
@@ -260,12 +261,17 @@ hr {
 
 #recipeBody #recipeGoal {
     padding:5em;
-    padding-bottom:7em;
+    padding-bottom: 9em;
+    border: 5px dashed #f26522;
+    background:#f9f9f9;
+    margin:5em;
 }
 
 #recipeBody #recipeSteps {
     padding:5em;
-    padding-top:0em;
+    border: 5px double #f26522;
+    background:#f9f9f9;
+    margin:5em;
 }
 #moduleButtonForm{
     padding-bottom: 1.5em;
