@@ -64,8 +64,6 @@ pre{
     margin: 0 auto;
     margin-top: 1em;
     overflow:auto;
-    
-
 }
 
 hr {
@@ -227,11 +225,11 @@ hr {
     width:25%;
     display:block;
     margin: 0 auto;
-    padding-top:1em;
+    padding-top:.5em;
 }
 
 #recipeSteps{
-        
+
 }
 
 #recipeGoal {
@@ -250,7 +248,7 @@ hr {
 }
 
 #recipePage li {
-   padding-bottom:1em;
+    padding-bottom:1em;
 }
 
 #recipePage p {
@@ -259,6 +257,12 @@ hr {
     font-size: 1.15em;
     padding-top:.5em;
 }
+
+#recipePage #recipeTitle {
+    margin-top:1em;
+}
+
+
 
 #recipeBody #recipeGoal {
     padding:5em;
@@ -285,13 +289,17 @@ hr {
     margin-top:1em;
 }
 
+#tipsPage #tipsTitle {
+    margin-top:1em;
+}
+
 #tipsPage h1 {
     font-family: "Raleway", sans-serif;
-    
+
 }
 
 #tipsPage h2 {
-  float:left;
+    float:left;
     padding-top:1.5em;
 }
 
@@ -310,7 +318,7 @@ hr {
 
 #tipsPage pre {
     margin:1em;
-    
+
 }
 
 #tipsPage ol {
@@ -322,7 +330,7 @@ hr {
 }
 
 #tipsPage li {
-   padding-bottom:1em;
+    padding-bottom:1em;
 }
 
 #tipsPage p {
@@ -438,7 +446,7 @@ body:before {
     #overviewPage {
         width:100%;
         padding:0em;
-    
+
     }
     #overviewPage .module {
         float:none;
@@ -446,10 +454,139 @@ body:before {
         margin:0 auto;
         height:100%;
     }
-    
+
     #recipePage img {
-     width:50%;
+        width:70%;
     }
+
+    #recipePage #recipeBody{
+        width:100%;
+    }
+    
+    #recipePage #recipeTitle{
+        width:100%;
+       
+    }
+    
+    #recipePage h2{
+      
+    }
+    
+    #recipePage #recipeGoal{
+        margin-left:0em;
+        margin-right:0em;
+        padding-top:1em;
+        padding-bottom:1em;
+        display:table;
+       
+        margin-bottom:2em;
+        /*
+        overflow-x: scroll;
+        white-space: nowrap;
+        */
+    }
+
+    #recipePage #recipeSteps{
+        
+        margin-left:0em;
+        margin-right:0em;
+        margin-top:0em;
+        padding-top:1em;
+        padding-bottom:1em;
+    }
+
+    #recipePage p {
+        float:left;
+        width:100%;
+        font-size: 1.15em;
+        padding-top:.5em;
+        padding-left: 0em;
+    }
+
+    #recipePage ol {
+        float:left;
+        width:100%;
+        font-size: 1.15em;
+        padding-left:0em;
+
+        padding-top:.5em;
+    }
+    
+    
+    #tipsBody{
+        margin:0em;
+        margin-top:2em;
+        padding-left:2em;
+        padding-right:2em;
+        padding-top:1em;
+    
+    }
+    
+    #tipsPage p {
+        padding-left:0em;
+        padding-right:0em;
+        margin:0em;
+    }
+
+    /*
+    #tipsPage img {
+        width:70%;
+    }
+    
+    tipsPage {
+        background:red;
+    }
+    
+    #tipsBody {
+    width:100%;
+    padding:1em;
+    padding-top:0em;
+    border: 5px double #f26522;
+    background:#f9f9f9;
+    margin:0em;
+    margin-top:1em;
+    }
+    
+    #tipsPage #tipsTitle{
+        width:100%;
+       
+    }
+    
+    #tipsPage h2{
+       padding-top:2em;
+    }
+    
+    #tipsPage p {
+        float:left;
+        width:100%;
+        font-size: 1.15em;
+        padding-top:.5em;
+        padding-left: 0em;
+    }
+    
+    /*
+    #tipsPage #tipsGoal{
+        margin-left:0em;
+        margin-right:0em;
+        padding-top:1em;
+        padding-bottom:1em;
+        display:table;
+        text-align: center;
+        margin-bottom:2em;
+      
+    }
+
+    #tipsPage #tipsSteps{
+        
+        margin-left:0em;
+        margin-right:0em;
+        margin-top:0em;
+        padding-top:1em;
+        padding-bottom:1em;
+    }
+*/
+    */
+
 }
 
 @media (max-width: 1000px) {
