@@ -49,7 +49,6 @@ p.code {
     padding-left: 50px;
 }
 
-
 pre{
     font-size:1.15em;
     font-family:Courier New;
@@ -262,8 +261,6 @@ hr {
     margin-top:1em;
 }
 
-
-
 #recipeBody #recipeGoal {
     padding:5em;
     padding-bottom: 9em;
@@ -397,7 +394,6 @@ hr {
     width: 33%;
     min-width: 20em;
 }
-
 
 /*the wrap, main, and footer divs make the footer stick to the bottom of the screen*/
 #wrap {

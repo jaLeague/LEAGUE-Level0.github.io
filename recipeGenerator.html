@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipe Generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <script src="script/headerAndFooter.js"></script>
+        <script src="script/recipeGenerator.js"></script>
+    </head>
+
+    <script>
+        function createRecipe(){
+            clearOutput();
+            var title = document.getElementById('title').value;
+            var goal = document.getElementById('goal').value;
+            var steps = document.getElementById('steps').value;
+            return createRecipeHTML(title, goal, steps);
+        }
+        
+        function displayHTML(){
+            var outputArea = document.getElementById('htmlOutput');
+            outputArea.style.visibility='visible';
+            outputArea.innerHTML+="<p>HTML output:</p><br>";
+            outputArea.append(createRecipe());
+        }
+
+        function clearOutput(){
+            document.getElementById('htmlOutput').innerHTML="";
+        }
+
+        function downloadHTMLFile() {
+            var textFile = null,
+                makeTextFile = function (text) {
+                    var data = new Blob([text], {type: 'text/html'});
+
+                    if (textFile !== null) {
+                        window.URL.revokeObjectURL(textFile);
+                    }
+                    textFile = window.URL.createObjectURL(data);
+                    return textFile;
+                };
+
+            var textarea = document.getElementById('textarea');
+
+            var link = document.getElementById('download_link');
+            link.href = makeTextFile(createRecipe());
+            link.style.display = 'block';
+        }
+
+    </script>
+    <body>
+        <div id ="wrap">
+            <div id ="main">
+                <div id="header">
+                    <script>addRecipeHeader();</script>
+                </div>
+                <div id = "tipsPage">
+                    <div id="tipsTitle">
+                        <h1>Recipe Generator</h1>
+                        <hr>
+                    </div>
+                    <div id ="tipsBody">
+                        <p>Use the form below to create your own recipe!</p>
+                        Recipe Title: <input type="text" name="title" id="title"><br>
+                        <p>Goal:</p><br>
+                        <textarea rows="4" cols="50" id="goal">
+
+                        </textarea>
+                        <p>Steps:</p><br>
+                        <textarea rows="4" cols="50" id="steps">
+                            1.  Buy a cat named George.
+                            2.  Teach George to hunt candybars.
+                            3.  Get a ton of candybars.
+                        </textarea>
+                        <br>
+                        <input type="button" name="display HTML" value="display HTML" onclick="displayHTML();"> 
+                        <input type="button" name="download HTML" value="download HTML" onclick="downloadHTMLFile();"> 
+                        <a download="file.html" id="download_link" style="display: none">Download</a>
+
+                        
+                        <div id="htmlOutput" style="visibility: hidden">
+                            
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <script>addRecipeFooter();</script>
+        </div>
+    </body>   
+</html>
