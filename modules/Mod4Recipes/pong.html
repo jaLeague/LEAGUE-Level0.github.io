@@ -1,42 +1,59 @@
-<link rel="stylesheet" href="http://jbt.github.io/markdown-editor/lib/github-markdown.css">
-<div id="out" class="markdown-body"><h4>Start with a new sketch that contains setup() and draw() methods. Ask your teacher if you don't know how to do this. The suggestions under each step should help you with your program.</h4>
-<h3>1.Make a canvas for your game.</h3>
-<p><code>size(width, height) //in setup method</code></p>
-<p><code>background(red, green, blue) //in draw method</code></p>
-<h3>2. Draw a ball on the screen.</h3>
-<p><code>ellipse(x, y, width, height) //in draw method</code></p>
-<p><code>fill(red, green, blue) //in draw method</code></p>
-<p><code>stroke(red, green, blue) //in draw method</code></p>
-<h3>3. Make the ball move across the screen (left to right).</h3>
-<p>...make a variable for the ball's X position and change it in the draw method.</p>
-<h3>4. Change the speed of the ball.</h3>
-<p>//make a variable for the speed of the ball in the X direction (from left to right).
-//changing this variable should change the speed of your ball</p>
-<h3>5. Make the ball bounce off of the walls.</h3>
+<!DOCTYPE html><html><head><title> Pong - League Level 0</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://league-central.github.io/curriculum/style/style.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><link rel="icon" type="image/png" href="https://league-central.github.io/curriculum/img/favicon.png"><script src="https://league-central.github.io/curriculum/script/headerAndFooter.js"></script></head><body><div id ="wrap"><div id ="main"><div id="header"><script>addRecipeHeader();</script></div><div id = "recipePage"><div id="recipeTitle"><h1>Pong</h1><hr></div><div id ="recipeBody"><div id="recipeGoal"><h2>Goal:</h2><p id="goal">Make Pong in Processing!</p></div><div id="recipeSteps"><h2>Steps:</h2><ol id="stepList"><li>Draw a ball on the screen.
 <pre>
-<code class="language-java"><span class="hljs-keyword">if</span>(x &gt; width){
+
+ellipse(x, y, width, height) //in draw method
+fill(red, green, blue) //in draw method
+stroke(red, green, blue) //in draw method
+
+</pre>
+</li><li>Make the ball move across the screen (left to right).
+...make a variable for the ball's X position and change it in the draw method.
+
+</li><li>Change the speed of the ball.
+<ol class="insetRecipeStepsOL">
+<li>make a variable for the speed of the ball in the X direction (from left to right).</li>
+<li>changing this variable should change the speed of your ball</li>
+</ol>
+
+</li><li>Make the ball bounce off of the walls.
+<pre>
+
+if(x > width){
     xSpeed = -xSpeed;
 }
-</code>
+
 </pre>
-<h3>6. Do the same in the Y (up and down) direction.</h3>
-<p>(hint) <code>height</code></p>
-<h3>7. Add a background image for your game.</h3>
-<p><code>PImage backgroundImage; //at the top of your sketch</code></p>
-<p><code>backgroundImage = loadImage("image.jpg"); //in the setup method</code></p>
-<p><code>image(backgroundImage, 0, 0); //in draw method</code></p>
-<p><code>image(backgroundImage, 0, 0, width, height); //if you want to resize</code></p>
-<h3>8. Draw a paddle at the bottom of the screen</h3>
-<p><code>rect(x, y, width, height);</code></p>
-<h3>9. Make the paddle move over and back with the mouse.</h3>
-<p><code>mouseX</code></p>
-<h3>10. Make the ball change Y direction when it hits the paddle. Figure it out by yourself, or use this</h3>
-<p>method:</p>
-<pre><code class="language-java"><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">intersects</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ballX, <span class="hljs-keyword">int</span> ballY, <span class="hljs-keyword">int</span> paddleX, <span class="hljs-keyword">int</span> paddleY,
-<span class="hljs-keyword">int</span> paddleLength)</span> </span>{
-    <span class="hljs-keyword">if</span> (ballY &gt; paddleY &amp;&amp; ballX &gt; paddleX &amp;&amp; ballX &lt; paddleX + paddleLength)
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
-    <span class="hljs-keyword">else</span>
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-}</code></pre>
-</div>
+</li><li>Do the same in the Y (up and down) direction.
+(hint) height
+
+</li><li>Add a background image for your game.
+<pre>
+
+PImage backgroundImage; //at the top of your sketch
+backgroundImage = loadImage("image.jpg"); //in the setup method
+image(backgroundImage, 0, 0); //in draw method
+image(backgroundImage, 0, 0, width, height); //if you want to resize
+
+</pre>
+</li><li>Draw a paddle at the bottom of the screen
+<pre>
+
+rect(x, y, width, height);
+
+</pre>
+</li><li>Use mouseX to make the paddle move over and back with the mouse.
+
+</li><li>Make the ball change Y direction when it hits the paddle. Figure it out by yourself, or use this
+method:
+<pre>
+
+boolean intersects(int ballX, int ballY, int paddleX, int paddleY,
+int paddleLength) {
+    if (ballY > paddleY && ballX > paddleX && ballX < paddleX + paddleLength)
+        return true;
+    else
+        return false;
+}
+
+</pre>
+</li></ol><div style="clear:both;"></div></div></div></div></div></div><div id="footer"><script>addRecipeFooter();</script></div></body></html>

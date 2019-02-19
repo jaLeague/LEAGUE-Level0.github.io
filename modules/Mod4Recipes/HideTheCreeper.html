@@ -1,86 +1,64 @@
-<!DOCTYPE html>
-<html>
-<title>Level 0 - Hide the Creeper</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://league-level0.github.io/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!DOCTYPE html><html><head><title> Hide The Creeper - League Level 0</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://league-central.github.io/curriculum/style/style.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><link rel="icon" type="image/png" href="https://league-central.github.io/curriculum/img/favicon.png"><script src="https://league-central.github.io/curriculum/script/headerAndFooter.js"></script></head><body><div id ="wrap"><div id ="main"><div id="header"><script>addRecipeHeader();</script></div><div id = "recipePage"><div id="recipeTitle"><h1>Hide The Creeper</h1><hr></div><div id ="recipeBody"><div id="recipeGoal"><h2>Goal:</h2><p id="goal">Find the Creeper!</p></div><div id="recipeSteps"><h2>Steps:</h2><ol id="stepList"><li>Start a new sketch with draw and setup methods.
 
+</li><li>Set your canvas size
+<pre>
 
-<body>
+size(width, height) //in setup method
 
-<h1>Hide the Creeper</h1>
+</pre>
+</li><li>Download a background image. Something with green where creeper can hide.
+<ol class="insetRecipeStepsOL">
+     <li>Save the image.</li>
+     <li>Drop the file onto your sketch.</li>
+     <li>Load it as the background (it must be same size as your canvas)</li>
+</ol>
+<pre>
 
-<p class="normal">
-1. Start a new sketch with <b>draw</b> and <b>setup</b> methods.<br>
-<br>
-2. Set your canvas size</p>
-    <p class="code">
-    size(width, height)  //in setup method</p>
+PImage minecraft = loadImage("minecraft.png");     //in setup method
+minecraft.resize(width, height);          //in setup method
+background(minecraft);          //in setup method
 
-<p class="normal">
-3. Download a background image. Something with green where creeper can hide.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Save the image.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drop the file onto your sketch.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Load it as the background (it must be same size as your canvas)</p>
-	
-	
-<p class="code">
-    PImage minecraft = loadImage("minecraft.png");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
-    minecraft.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
-	background(minecraft);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
-</p>
-    
-<p class="normal">
-4. Load the creeper image into your sketch<br>
+</pre>
+</li><li>Load the creeper image into your sketch
+<ol class="insetRecipeStepsOL">
+     <li>Download this Creeper to your desktop (or choose another)</li>
+     <li>Drop the image onto your sketch</li>
+     <li>Use the code below to draw the image (make sure you put it in the right place)</li>
+</ol>
+<pre>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Download this <a href="http://bit.ly/ZpitSv">Creeper</a> to your desktop (or choose another)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Drop the image onto your sketch<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Use the code below to draw the image (make sure you put it in the right place)<br>
+PImage creeper;     //at the top of your program
+creeper=loadImage("creeper.png");     //in setup method
+image(creeper, mouseX, mouseY);     //in draw method
 
-        <p class="code">
-    PImage creeper;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//at the top of your program<br>
-    creeper=loadImage("creeper.png");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method<br>
-    image(creeper, mouseX, mouseY);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in draw method<br>
-    </p>
-    
-<p class="normal">
-5. Resize the creeper image so that it is small and can hide, right after it’s loaded.	<br>
-    <p class="code">
-   creeper.resize(width, height);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//in setup method
-    </p>
+</pre>
 
-<p class="normal">
-6. Pick a place to hide your creeper. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Use two variables to store the location (x and y) of the creeper, and initialize them (at the top of your sketch).<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Change your code so that the creeper image is drawn at this location.<br>
-</p>
+</li><li>Resize the creeper image so that it is small and can hide, right after it’s loaded.	
+<pre>
 
-<p class="normal">
-7. In the <b>draw</b> method, draw a small red ellipse where the mouse clicks.<br>
-<br>
+creeper.resize(width, height);     //in setup method
 
-8.When mouseX and mouseY are the top left corner, draw a green ellipse instead of a red one.<br>
-<br>
+</pre>
+</li><li>Pick a place to hide your creeper. 
+<ol class="insetRecipeStepsOL">
+     <li>Use two variables to store the location (x and y) of the creeper, and initialize them (at the top of your sketch).</li>
+     <li>Change your code so that the creeper image is drawn at this location.</li>
+</ol>
+</li><li>In the draw method, draw a small red ellipse where the mouse clicks.
 
-9. If mouseX and mouseY are near the location of your creeper, make the circle green. <br>
-    Note: you will need to check the x and y values separately if you use the code below.</p>
-    <p class="code">
-        boolean isNear(int a, int b) {<br>
-  		if (abs(a - b) < 10)<br>
-    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>
-		else<br>
- 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
-        }</p>
+</li><li>If mouseX and mouseY are near the location of your creeper, make the circle green. 
+Note: you will need to check the x and y values separately if you use the code below.
+<pre>
 
-<p class="normal">
-10. Let the user know that they found the creeper.<br>
-<br>
-11. Add lots more creepers… or move the creeper when they find it
-</p>
+boolean isNear(int a, int b) {
+if (abs(a - b) < 10)
+     return true;
+else
+     return false;
+}
 
-<a href="https://processing.org/reference">
-    <img src="https://league-level0.github.io/p3logo.jpeg" class="footer" alt="Processing Reference"></a>	
-	
-<script src="https://league-level0.github.io/copyright.js"></script>
-</body></html>
+</pre>
+</li><li>Let the user know that they found the creeper.
+
+</li><li>Add lots more creepers… or move the creeper when they find it
+</li></ol><div style="clear:both;"></div></div></div></div></div></div><div id="footer"><script>addRecipeFooter();</script></div></body></html>

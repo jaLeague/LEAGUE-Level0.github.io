@@ -14,12 +14,17 @@
     <script>
         function createRecipe(){
             clearOutput();
+            var containsTitleImage = document.getElementById('imageYes').checked
+            var titleImageFileName = "";
+            if(containsTitleImage){
+                titleImageFileName = document.getElementById('titleImageFileName').value;
+            }
             var title = document.getElementById('title').value;
             var goal = document.getElementById('goal').value;
             var steps = document.getElementById('steps').value;
-            return createRecipeHTML(title, goal, steps);
+            return createRecipeHTML(title, containsTitleImage, titleImageFileName, goal, steps);
         }
-        
+
         function displayHTML(){
             var outputArea = document.getElementById('htmlOutput');
             outputArea.style.visibility='visible';
@@ -45,9 +50,26 @@
 
             var textarea = document.getElementById('textarea');
 
-            var link = document.getElementById('download_link');
+            var link = document.getElementById('downloadLink');
             link.href = makeTextFile(createRecipe());
+            //document.getElementById("downloadLink").download = document.getElementById("title").value + ".html";
+            document.getElementById("downloadLink").download = formatTitleForFileName();
             link.style.display = 'block';
+        }
+
+        function formatTitleForFileName(){
+            var input = document.getElementById("title").value;
+            input = input.trim();
+            input = input.charAt(0).toUpperCase() + input.substring(1);
+            for(var i=1; i<input.length-2; i++){
+                if(input.charAt(i)===' '){
+                    input = input.substring(0, i) + input.charAt(i+1).toUpperCase() + input.substring(i+2);
+                }
+            }
+            if(input.charAt(input.length-2)==' '){
+                input = input.substring(0, input.length-2) + input.substring(input.length-1);
+            }
+            return input;
         }
 
     </script>
@@ -65,24 +87,34 @@
                     <div id ="tipsBody">
                         <p>Use the form below to create your own recipe!</p>
                         Recipe Title: <input type="text" name="title" id="title"><br>
-                        <p>Goal:</p><br>
-                        <textarea rows="4" cols="50" id="goal">
-
-                        </textarea>
-                        <p>Steps:</p><br>
+                        <p>Goal:</p>
+                        <textarea rows="4" cols="50" id="goal"></textarea>
+                        <br><br>Add a title image?<br>
+                        <input type="radio" id="imageYes" name="titleImage" value="Yes" onchange="document.getElementById('imageForm').style.display='inherit';"> Yes<br>
+                        <input type="radio" id="imageNo" name="titleImage" value="No" onchange="document.getElementById('imageForm').style.display='none';" checked="checked"> No<br>
+                        <div id="imageForm" style="display:none;">
+                            <br>Image File Name: <input type="text" name="imageFileName" id="titleImageFileName"><br>
+                        </div>
+                        <p>Steps:</p>
                         <textarea rows="4" cols="50" id="steps">
-                            1.  Buy a cat named George.
-                            2.  Teach George to hunt candybars.
-                            3.  Get a ton of candybars.
+1.  Buy a cat named George.
+<pre>
+Here is the first line of code
+    This line is even more indented
+    This line is as indented as the last 
+Back to the outer level
+</pre>
+2.  Teach George to hunt candybars.
+3.  Get a ton of candybars.
                         </textarea>
                         <br>
                         <input type="button" name="display HTML" value="display HTML" onclick="displayHTML();"> 
                         <input type="button" name="download HTML" value="download HTML" onclick="downloadHTMLFile();"> 
-                        <a download="file.html" id="download_link" style="display: none">Download</a>
+                        <a id="downloadLink" style="display: none">Download</a>
 
-                        
+
                         <div id="htmlOutput" style="visibility: hidden">
-                            
+
                         </div>
                         <div style="clear:both;"></div>
                     </div>
