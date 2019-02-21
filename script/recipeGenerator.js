@@ -1,79 +1,59 @@
-
-function createRecipeHTML2(recipeTitle, recipeGoal, recipeSteps){
-    var preformatted = document.createElement('pre');
-     var head = 
-                    '<head>'+
-                        +'<title> ' + recipeTitle + ' - League Level 0</title>'
-                        +'<meta charset="UTF-8">'
-                        +'<meta name="viewport" content="width=device-width, initial-scale=1">'
-                        +'<link rel="stylesheet" href="style/style.css">'
-                        +'<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">'
-                        +'<link rel="icon" type="image/png" href="../../img/favicon.png">'
-                        +'<script src="../../script/headerAndFooter.js"></script>'
-                    +'</head>';
-    
-    var test = '<head>';
-    test+='<title> myTitle </title>';
-    preformatted.innerHTML+=test;
-    return preformatted;
-}
-
 function createRecipeHTML(recipeTitle, containsTitleImage, titleImageFileName, recipeGoal, recipeSteps){
-                var htmlTags = '<!DOCTYPE html>'
-                                +'<html>';
+            var htmlTags = '<!DOCTYPE html>'
+                                +'\n<html>';
 
                 var head = 
-                    '<head>'
-                        +'<title> ' + recipeTitle + ' - League Level 0</title>'
-                        +'<meta charset="UTF-8">'
-                        +'<meta name="viewport" content="width=device-width, initial-scale=1">'
-                        +'<link rel="stylesheet" href="https://league-central.github.io/curriculum/style/style.css">'
-                        +'<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">'
-                        +'<link rel="icon" type="image/png" href="https://league-central.github.io/curriculum/img/favicon.png">'
-                        +'<script src="https://league-central.github.io/curriculum/script/headerAndFooter.js"></script>'
-                    +'</head>';
+                         '\n    <head>'
+                        +'\n        <title> ' + recipeTitle + ' - League Level 0</title>'
+                        +'\n        <meta charset="UTF-8">'
+                        +'\n        <meta name="viewport" content="width=device-width, initial-scale=1">'
+                        +'\n        <link rel="stylesheet" href="https://league-central.github.io/curriculum/style/style.css">'
+                        +'\n        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">'
+                        +'\n        <link rel="icon" type="image/png" href="https://league-central.github.io/curriculum/img/favicon.png">'
+                        +'\n        <script src="https://league-central.github.io/curriculum/script/headerAndFooter.js"></script>'
+                        +'\n    </head>';
     
     
                 var body = 
-                    '<body>'
-                        +'<div id ="wrap">'
-                            +'<div id ="main">'
-                                +'<div id="header">'
-                                    +'<script>addRecipeHeader();</script>'
-                                +'</div>'
-                                +'<div id = "recipePage">'
-                                    +'<div id="recipeTitle">'
-                                        +'<h1>'+recipeTitle+'</h1>'                                        
-                                        +'<hr>';
+                         '\n    <body>'
+                        +'\n        <div id ="wrap">'
+                        +'\n            <div id ="main">'
+                        +'\n                <div id="header">'
+                        +'\n                    <script>addRecipeHeader();</script>'
+                        +'\n                </div>'
+                        +'\n                <div id = "recipePage">'
+                        +'\n                    <div id="recipeTitle">'
+                        +'\n                        <h1>'+recipeTitle+'</h1>'                                        
+                        +'\n                        <hr>';
     
                 if(containsTitleImage){
-                    body+= '<img src='+titleImageFileName+' alt="'+recipeTitle+' image">'
+                    body+= '\n                        <img src="'+titleImageFileName+'" alt="'+recipeTitle+' image">'
                 }
                                       
                 body+=
-                                    '</div>'
-                                    +'<div id ="recipeBody">'
-                                        +'<div id="recipeGoal">'
-                                            +'<h2>Goal:</h2>'
-                                            +'<p id="goal">'
-                                            +recipeGoal
-                                            +'</p>'
-                                        +'</div>'
-                                        +'<div id="recipeSteps">'
-                                            +'<h2>Steps:</h2>'
-                                            +'<ol id="stepList">'
-                                            +formatRecipeSteps(recipeSteps)
-                                            +'</ol>'
-                                            +'<div style="clear:both;"></div>'
-                                        +'</div>'
-                                    +'</div>'
-                                +'</div>'
-                            +'</div>'
-                        +'</div>'
-                        +'<div id="footer">'
-                            +'<script>addRecipeFooter();</script>'
-                        +'</div>'
-                    +'</body>';   
+                         '\n                    </div>'
+                        +'\n                    <div id ="recipeBody">'
+                        +'\n                        <div id="recipeGoal">'
+                        +'\n                            <h2>Goal:</h2>'
+                        +'\n                            <p id="goal">'
+                        +'\n                                '+recipeGoal
+                        +'\n                            </p>'
+                        +'\n                        </div>'
+                        +'\n                        <div id="recipeSteps">'
+                        +'\n                            <h2>Steps:</h2>'
+                        +'\n                            <ol id="stepList">'
+                        +                                   formatRecipeSteps(recipeSteps)
+                        +'\n                            </ol>'
+                        +'\n                            <div style="clear:both;"></div>'
+                        +'\n                        </div>'
+                        +'\n                    </div>'
+                        +'\n                </div>'
+                        +'\n            </div>'
+                        +'\n        </div>'
+                        +'\n        <div id="footer">'
+                        +'\n            <script>addRecipeFooter();</script>'
+                        +'\n        </div>'
+                        +'\n    </body>';   
     
                 var closingHTMLTag = 
                         '</html>';
@@ -89,7 +69,7 @@ function formatRecipeSteps(recipeStepsString){
     var output = "";
     for(var i=0; i<matches.length; i++){
         matches[i] = matches[i].replace(/[1-9]?[0-9]\.\s+/gm, '');
-        output+='<li>' + matches[i] + '</li>';
+        output+='\n                                <li>' + matches[i] + '                                </li>';
     }
     return output
 }
