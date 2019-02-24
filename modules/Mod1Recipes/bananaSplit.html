@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html>
-<title>Level 0 - Banana Split</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://league-level0.github.io/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <head>
+        <title> Banana Split - League Level 0</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://league-central.github.io/curriculum/style/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="icon" type="image/png" href="https://league-central.github.io/curriculum/img/favicon.png">
+        <script src="https://league-central.github.io/curriculum/script/headerAndFooter.js"></script>
+    </head>
+    <body>
+        <div id ="wrap">
+            <div id ="main">
+                <div id="header">
+                    <script>addRecipeHeader();</script>
+                </div>
+                <div id = "recipePage">
+                    <div id="recipeTitle">
+                        <h1>Banana Split</h1>
+                        <hr>
+                        <img src="http://level0.jointheleague.org/modules/Mod1Recipes/images/splitOutput.png" alt="Banana Split image">
+                    </div>
+                    <div id ="recipeBody">
+                        <div id="recipeGoal">
+                            <h2>Goal:</h2>
+                            <p id="goal">
+                                Use for loops to recreate the image above!
+                            </p>
+                        </div>
+                        <div id="recipeSteps">
+                            <h2>Steps:</h2>
+                            <ol id="stepList">
+                                <li>Create a new sketch in Processing and add <a href="https://league-central.github.io/curriculum/processingTips.html">setup() and draw() methods.</a>
 
-<script src="https://league-level0.github.io/copyrightFooter.js"></script>
-<body>
-
-<h1>Banana Split</h1>
- 
- <p class="normal">
- In <b>Processing</b>, write a program that will print &ldquo; ice cream ice cream ice cream banana&rdquo;.<br>
-  However, you can only use the words "ice cream" once in your code. Use:
- <br>
- </p>
- 
- <p class="code"><br>text(&quot;word&quot;, xPos, yPos)</p>
- 
- <p class="normal">
- <br>to display on the canvas. When you&rsquo;re done, it should look like this ... </p>
- 
-<br>
-<img align="middle" alt="splitOutput.png" src="images/splitOutput.png" style="width: 132.50px; height: 151.30px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
-
-<p class="normal">Then celebrate!</p>
-
-<br>
- <img alt="banana.jpg" src="images/banana.jpg" style="width: 286.50px; height: 262.48px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
- </span></p>
-
-<a href="https://processing.org/reference">
-    <img src="https://league-level0.github.io/p3logo.jpeg" class="footer" alt="Processing Reference"></a>
-   
-<div id="copyright">
-<script>copyright();</script>
-</div>
-
-</body></html>
+                                </li>
+                                <li>Use the code below to print “ice cream ice cream ice cream banana” to the screen.  However, you can only use the words "ice cream" once in your code
+<pre>
+text("word", xPos, yPos);
+</pre>
+                                </li>
+                            </ol>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <script>addRecipeFooter();</script>
+        </div>
+    </body></html>

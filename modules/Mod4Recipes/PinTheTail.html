@@ -9,71 +9,53 @@
 <ol class="insetRecipeStepsOL">
 <li>First create (declare) variables to hold the images at the top of the sketch.
 <pre>
-
 PImage donkey;
 PImage tail;
-
 </pre>
 </li>
 <li>Now add a setup() method. This is where we put the code that will run ONCE at the start of the program. In this method, set the variables to hold the images.
 
 <pre>
-
 donkey = loadImage("donkey.jpg");      //change the file name if you need to
 tail = loadImage("tail.png");      //change the file name if you need to
-
 </pre>
 </li>
 </ol>
 </li><li>In the setup() method, set your canvas size to EXACTLY match the size of the donkey image. You can get the size of the image from the file information on the Desktop.
 <pre>
-
 size(width, height);     //replace width, height with your picture's dimensions
-
 </pre>
 </li><li>Add a draw() method to your sketch. This is where we put the code that will repeat while your program is running. 
      Draw the donkey and tail in this method. The tail should move around with the mouse. Try it!
 <pre>
-
     background (donkey);
     image(tail, mouseX, mouseY);
-
 </pre>
 </li><li>If you need to, resize the tail to fit onto the donkey. Since this is done ONCE, put this code into the setup() method.
      Note: if you leave height or width as zero, the image will scale proportionally.
 <pre>
-
 tail.resize(width, height);     //replace width, height with your tail's dimensions
-
 </pre>
 </li><li>If the top of the tail is not in the top left corner of your image, you will have to adjust the x and y values so that the top of the tail is drawn where you click the mouse. To do this, you would need to adjust the x and y values to make your image work as shown below. 
 <pre>
-
 image(tail, mouseX-10, mouseY-20);
-
 </pre>
 </li><li>Now we are going to start adding bounding boxes! These should go in the draw() method, AFTER the background is drawn!
 <ol class="insetRecipeStepsOL">
      <li>First draw a bounding box (rectangle) in the top left corner of the sketch.
 <pre>
-
 rect(0, 0, 30, 30);
-
 </pre>
 </li>
      <li>Now we need to draw another bounding box where the tail should go. You can use mousePressed to help you figure out the x and y coordinates of the corner of this rectangle (see the picture at the top of this page for an idea of what this will look like). Example:
 <pre>
-
 rect(454, 75, 40, 40);
-
 </pre>
 </li>
 </ol>
 </li><li>Now, change your code so the donkey is only shown when the mouse is inside the corner bounding box. Hint: use the dist() command:
 <pre>
-
-dist(0, 0, mouseX, mouseY) < 30
-
+dist(0, 0, mouseX, mouseY) &lt; 30
 </pre>
 <br>
       When the mouse is outside the corner box, you should show a solid color background.
@@ -85,7 +67,6 @@ dist(0, 0, mouseX, mouseY) < 30
 
 NOTE: You may need to add the minim library to your sketch. Ask your teacher if you do not know how to do this.
 <pre>
-
 import ddf.minim.*;          //at the very top of your sketch
 AudioSample woohooSound;          //at the top of your sketch
 boolean playSound = true;          //at the top of your sketch
@@ -98,15 +79,12 @@ if (playSound) {
      woohooSound.trigger();
      playSound = false;
 }
-
 </pre>
 </li><li>When you have tested that your pogram works, remove the line of code that draws the tail target bounding box and see if you can pin the tail on the donkey.
 
 </li><li>OPTION: Add some text to give the user instructions on how to play the game.
 <pre>
-
 textSize(24);
 text("Message",100,20);
-
 </pre>
 </li></ol><div style="clear:both;"></div></div></div></div></div></div><div id="footer"><script>addRecipeFooter();</script></div></body></html>
