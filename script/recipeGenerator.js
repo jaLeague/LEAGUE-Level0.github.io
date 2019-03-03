@@ -56,7 +56,7 @@ function createRecipeHTML(recipeTitle, containsTitleImage, titleImageFileName, r
                         +'\n    </body>';   
     
                 var closingHTMLTag = 
-                        '</html>';
+                        '\n</html>';
             
 
     return htmlTags + head + body + closingHTMLTag;
@@ -68,8 +68,33 @@ function formatRecipeSteps(recipeStepsString){
     var matches = recipeStepsString.match(/[1-9]?[0-9]\.\s(.+?\s+?)+?(?=(?!<pre[^>]*?>)[1-9]?[0-9]\.(?![^<]*?<\/pre>))/gm);
     var output = "";
     for(var i=0; i<matches.length; i++){
-        matches[i] = matches[i].replace(/[1-9]?[0-9]\.\s+/gm, '');
+        matches[i] = matches[i].replace(/[1-9]?[0-9]\.\s+/gm, '');  //remove the step numbers from the recipe as they are provided by the <li>
+        matches[i] = escapeCharactersInPreformattedCode(matches[i]);
         output+='\n                                <li>' + matches[i] + '                                </li>';
     }
+    
+    //var preMatches = recipeStepsString.match(/<pre>((?:.|\n|\r)*?)<\/pre>/gm);
     return output
+}
+
+function escapeCharactersInPreformattedCode(currentStep){
+    for(var i=0; i<currentStep.length; i++){
+        if(currentStep.charAt(i)==='<'){
+            console.log("current"+currentStep.substring(i, i+4)+"-");
+            if(currentStep.substring(i, i+5)!="<pre>" && currentStep.substring(i, i+6)!="</pre>" && currentStep.substring(i, i+7)!="<a href" && currentStep.substring(i, i+4)!="</a>" ){
+                currentStep = currentStep.substring(0, i) + '&lt;' + currentStep.substring(i+1);
+            }
+        }
+        else if(currentStep.charAt(i)==='>'){
+            console.log(currentStep.substring(i-1, i+1)+" " + currentStep.substring(i-1, i+1)+ " " + currentStep.substring(i-3, i+1));
+             if(currentStep.substring(i-4, i+1)!="<pre>" && currentStep.substring(i-5, i+1)!="</pre>" && currentStep.substring(i-1, i+1)!="\">" && currentStep.substring(i-1, i+1)!="\'>" && currentStep.substring(i-3, i+1)!="</a>"){
+                 currentStep = currentStep.substring(0, i) + '&gt;' + currentStep.substring(i+1);
+             }
+        }
+        else if(currentStep.charAt(i)==='&'){
+             currentStep = currentStep.substring(0, i) + '&amp;' + currentStep.substring(i+1);
+        }
+    }
+    console.log(currentStep);
+    return currentStep;
 }
